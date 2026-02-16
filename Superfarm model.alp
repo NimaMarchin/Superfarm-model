@@ -109,21 +109,6 @@
 			<CurrentLevel>1769865394882</CurrentLevel>
 			<ConnectionsId>1769865394877</ConnectionsId>
 			<Variables>
-				<Variable Class="AuxVariable">
-					<Id>1770586854860</Id>
-					<Name><![CDATA[Plant_Growth_Rate]]></Name>
-					<X>610</X><Y>-330</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[Greenhouse_Temp * 0.1]]></Formula>
-						<Value><![CDATA[0]]></Value>
-						<Color>-16751616</Color>
-					</Properties>
-
-				</Variable>
 				<Variable Class="StockVariable">
 					<Id>1770580684116</Id>
 					<Name><![CDATA[Fish_Tank_Oxygen]]></Name>
@@ -145,7 +130,7 @@
 				<Variable Class="StockVariable">
 					<Id>1770580753749</Id>
 					<Name><![CDATA[Oxygen_Buffer]]></Name>
-					<Unit>kg</Unit> 
+					<Unit>mol</Unit> 
 					<X>260</X><Y>-780</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -197,7 +182,7 @@
 				<Variable Class="StockVariable">
 					<Id>1771221680532</Id>
 					<Name><![CDATA[H2_prod]]></Name>
-					<Unit>kg</Unit> 
+					<Unit>mol</Unit> 
 					<X>260</X><Y>-1040</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -241,7 +226,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SourceId="1770580753749" TargetId="1770580684116" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[400]]></Formula>
+						<Formula><![CDATA[0.02]]></Formula>
 						<Color>-14774017</Color>
 						<ValveIndex>1</ValveIndex>
 						<Points>
@@ -281,7 +266,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SourceId="1770584954606" TargetId="1770586694877" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[750]]></Formula>
+						<Formula><![CDATA[700]]></Formula>
 						<Color>-1459683328</Color>
 						<ValveIndex>1</ValveIndex>
 						<Points>
@@ -301,7 +286,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SourceId="1770586694877" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[Plant_Growth_Rate*0.5]]></Formula>
+						<Formula><![CDATA[500]]></Formula>
 						<Color>-8388608</Color>
 						<ValveIndex>1</ValveIndex>
 						<Points>
@@ -321,7 +306,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties TargetId="1771221680532" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[(P_Electrolyzer * Eff_Electrolyzer) / delta_h]]></Formula>
+						<Formula><![CDATA[(P_Electrolyzer * Eff_Electrolyzer) / Delta_h]]></Formula>
 						<Color>-16744448</Color>
 						<ValveIndex>1</ValveIndex>
 						<Points>
@@ -334,7 +319,7 @@
 				<Variable Class="Parameter">
 					<Id>1770590285439</Id>
 					<Name><![CDATA[P_Electrolyzer]]></Name>
-					<Unit>J</Unit> 
+					<Unit>J/s</Unit> 
 					<X>-120</X><Y>-920</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -359,6 +344,7 @@
 				<Variable Class="Parameter">
 					<Id>1770590347808</Id>
 					<Name><![CDATA[Eff_Electrolyzer]]></Name>
+					<Unit></Unit> 
 					<X>-20</X><Y>-840</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -382,8 +368,8 @@
 				</Variable>
 				<Variable Class="Parameter">
 					<Id>1770591136799</Id>
-					<Name><![CDATA[delta_h]]></Name>
-					<Unit></Unit> 
+					<Name><![CDATA[Delta_h]]></Name>
+					<Unit>J/mol</Unit> 
 					<X>-180</X><Y>-1080</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -433,7 +419,7 @@
 				<Variable Class="Parameter">
 					<Id>1771182462320</Id>
 					<Name><![CDATA[ox_consum_fish]]></Name>
-					<Unit>kg/s</Unit> 
+					<Unit>mol/s</Unit> 
 					<X>820</X><Y>-700</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -507,36 +493,6 @@
 				</Variable>
 			</Variables>
 			<Dependences>
-				<Link SourceId="1770586694877" TargetId="1770586854860" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-50</X><Y>90</Y></Direction>
-					<Id>1770589518269</Id>
-					<Name><![CDATA[Greenhouse_Temp - Plant_Growth_Rate]]></Name>
-					<X>660</X><Y>-420</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color>-11832691</Color>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1770586854860" TargetId="1770588654461" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>150</X><Y>-90</Y></Direction>
-					<Id>1770590000773</Id>
-					<Name><![CDATA[Plant_Growth_Rate - Q_diss]]></Name>
-					<X>610</X><Y>-330</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color>-11832691</Color>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
 				<Link SourceId="1770590285439" TargetId="1771221716611" Polarity="null">
 					<Height>28.294</Height>
 					<PolarityPosition>0.95</PolarityPosition>
@@ -602,7 +558,7 @@
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>340</X><Y>40</Y></Direction>
 					<Id>1770591578781</Id>
-					<Name><![CDATA[delta_h - h2_in]]></Name>
+					<Name><![CDATA[Delta_h - h2_in]]></Name>
 					<X>-180</X><Y>-1080</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -824,7 +780,7 @@
 					<ParameterName><![CDATA[Eff_Electrolyzer]]></ParameterName>
 				</Parameter>
 				<Parameter>
-					<ParameterName><![CDATA[delta_h]]></ParameterName>
+					<ParameterName><![CDATA[Delta_h]]></ParameterName>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[V_fish_tank]]></ParameterName>
