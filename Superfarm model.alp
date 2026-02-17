@@ -7,7 +7,7 @@
 <AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.9.7.202512121156" AlpVersion="8.9.7">
 <Model>
 	<Id>1769865394861</Id>
-	<Name><![CDATA[Superfarm model test]]></Name>
+	<Name><![CDATA[Superfarm model]]></Name>
 	<EngineVersion>6</EngineVersion>
 	<JavaPackageName><![CDATA[superfarm_model_test]]></JavaPackageName>
 	<ModelTimeUnit><![CDATA[Hour]]></ModelTimeUnit>
@@ -109,70 +109,28 @@
 			<CurrentLevel>1769865394882</CurrentLevel>
 			<ConnectionsId>1769865394877</ConnectionsId>
 			<Variables>
-				<Variable Class="AuxVariable">
-					<Id>1770585237500</Id>
-					<Name><![CDATA[H2_Production_Rate]]></Name>
-					<X>260</X><Y>-600</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[(P_Electrolyzer * Eff_Electrolyzer) / LHV_H2]]></Formula>
-						<Value><![CDATA[0]]></Value>
-						<Color>-16711936</Color>
-					</Properties>
-
-				</Variable>
-				<Variable Class="AuxVariable">
-					<Id>1770586854860</Id>
-					<Name><![CDATA[Plant_Growth_Rate]]></Name>
-					<X>610</X><Y>-330</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[Greenhouse_Temp * 0.1]]></Formula>
-						<Value><![CDATA[0]]></Value>
-						<Color>-16751616</Color>
-					</Properties>
-
-				</Variable>
-				<Variable Class="AuxVariable">
-					<Id>1770590913157</Id>
-					<Name><![CDATA[Total_System_Efficiency]]></Name>
-					<X>660</X><Y>-700</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[((H2_Production_Rate * LHV_H2) + (Heat_Transfer * M_Storage * CP_Water) + (Ox_Production_Rate * 0.1)) / P_Electrolyzer]]></Formula>
-						<Value><![CDATA[0]]></Value>
-						<Color>-256</Color>
-					</Properties>
-
-				</Variable>
 				<Variable Class="StockVariable">
 					<Id>1770580684116</Id>
 					<Name><![CDATA[Fish_Tank_Oxygen]]></Name>
-					<X>580</X><Y>-930</Y>
+					<Unit>mol/l</Unit> 
+					<X>790</X><Y>-610</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Array="false">
-					<EquationStyle>classic</EquationStyle>
+					<EquationStyle>custom</EquationStyle>
 					<Width>20</Width>
 					<Height>20</Height>
-						<InitialValue><![CDATA[5]]></InitialValue>
+						<Expression><![CDATA[(ox_out-ox_consum_fish)/V_fish_tank]]></Expression>
+						<InitialValue><![CDATA[0.0005]]></InitialValue>
 						<Color>-16776961</Color>
 					</Properties>
 				</Variable>
 				<Variable Class="StockVariable">
 					<Id>1770580753749</Id>
 					<Name><![CDATA[Oxygen_Buffer]]></Name>
+					<Unit>mol</Unit> 
 					<X>260</X><Y>-780</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -189,6 +147,7 @@
 				<Variable Class="StockVariable">
 					<Id>1770584954606</Id>
 					<Name><![CDATA[Heat_Storage]]></Name>
+					<Unit>J</Unit> 
 					<X>360</X><Y>-420</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -199,13 +158,32 @@
 					<Width>20</Width>
 					<Height>20</Height>
 						<InitialValue><![CDATA[0]]></InitialValue>
-						<Color>-3318692</Color>
+						<Color>-65536</Color>
 					</Properties>
 				</Variable>
 				<Variable Class="StockVariable">
 					<Id>1770586694877</Id>
 					<Name><![CDATA[Greenhouse_Temp]]></Name>
+					<Unit>K</Unit> 
 					<X>660</X><Y>-420</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Array="false">
+					<EquationStyle>custom</EquationStyle>
+					<Width>20</Width>
+					<Height>20</Height>
+						<Expression><![CDATA[(Heat_Transfer-Q_diss)/(m_greenhouse*cp_air)]]></Expression>
+						<InitialValue><![CDATA[298]]></InitialValue>
+						<Color>-65536</Color>
+					</Properties>
+				</Variable>
+				<Variable Class="StockVariable">
+					<Id>1771221680532</Id>
+					<Name><![CDATA[H2_prod]]></Name>
+					<Unit>mol</Unit> 
+					<X>260</X><Y>-1040</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -214,20 +192,21 @@
 					<EquationStyle>classic</EquationStyle>
 					<Width>20</Width>
 					<Height>20</Height>
-						<InitialValue><![CDATA[20]]></InitialValue>
-						<Color>-65536</Color>
+						<InitialValue><![CDATA[0]]></InitialValue>
+						<Color>-16744448</Color>
 					</Properties>
 				</Variable>
 				<Variable Class="Flow">
 					<Id>1770581415133</Id>
 					<Name><![CDATA[Ox_Production_Rate]]></Name>
+					<Unit>mol/s</Unit> 
 					<X>60</X><Y>-780</Y>
 					<Label><X>-75</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties TargetId="1770580753749" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[H2_Production_Rate*8]]></Formula>
+						<Formula><![CDATA[h2_in*2]]></Formula>
 						<Color>-14774017</Color>
 						<ValveIndex>1</ValveIndex>
 						<Points>
@@ -239,26 +218,28 @@
 				</Variable>
 				<Variable Class="Flow">
 					<Id>1770585081900</Id>
-					<Name><![CDATA[Ox_Consumption]]></Name>
+					<Name><![CDATA[ox_out]]></Name>
+					<Unit>mol/s</Unit> 
 					<X>260</X><Y>-780</Y>
 					<Label><X>-20</X><Y>-110</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SourceId="1770580753749" TargetId="1770580684116" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[400]]></Formula>
-						<Color>-16776961</Color>
+						<Formula><![CDATA[0.02]]></Formula>
+						<Color>-14774017</Color>
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
 							<Point><X>160</X><Y>0</Y></Point>
-							<Point><X>320</X><Y>-150</Y></Point>
+							<Point><X>530</X><Y>170</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
 				<Variable Class="Flow">
 					<Id>1770585768460</Id>
 					<Name><![CDATA[Heat_Production_Rate]]></Name>
+					<Unit>J/s</Unit> 
 					<X>70</X><Y>-420</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -266,7 +247,7 @@
 					<ShowLabel>true</ShowLabel>
 					<Properties TargetId="1770584954606" External="false" Constant="false" Array="false">
 						<Formula><![CDATA[P_Electrolyzer*(1-Eff_Electrolyzer)]]></Formula>
-						<Color>-3318692</Color>
+						<Color>-65536</Color>
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
@@ -278,13 +259,14 @@
 				<Variable Class="Flow">
 					<Id>1770586640387</Id>
 					<Name><![CDATA[Heat_Transfer]]></Name>
+					<Unit>J/s</Unit> 
 					<X>360</X><Y>-420</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SourceId="1770584954606" TargetId="1770586694877" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[Heat_Storage/(M_Storage*CP_Water)]]></Formula>
+						<Formula><![CDATA[700]]></Formula>
 						<Color>-1459683328</Color>
 						<ValveIndex>1</ValveIndex>
 						<Points>
@@ -296,14 +278,15 @@
 				</Variable>
 				<Variable Class="Flow">
 					<Id>1770588654461</Id>
-					<Name><![CDATA[Heat_Consumption]]></Name>
+					<Name><![CDATA[Q_diss]]></Name>
+					<Unit>J/s</Unit> 
 					<X>660</X><Y>-420</Y>
 					<Label><X>10</X><Y>25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SourceId="1770586694877" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[Plant_Growth_Rate*0.5]]></Formula>
+						<Formula><![CDATA[500]]></Formula>
 						<Color>-8388608</Color>
 						<ValveIndex>1</ValveIndex>
 						<Points>
@@ -313,10 +296,31 @@
 						</Points>
 					</Properties>
 				</Variable>
+				<Variable Class="Flow">
+					<Id>1771221716611</Id>
+					<Name><![CDATA[h2_in]]></Name>
+					<Unit>mol/s</Unit> 
+					<X>60</X><Y>-1040</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TargetId="1771221680532" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[(P_Electrolyzer * Eff_Electrolyzer) / Delta_h]]></Formula>
+						<Color>-16744448</Color>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>100</X><Y>0</Y></Point>
+							<Point><X>200</X><Y>0</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
 				<Variable Class="Parameter">
 					<Id>1770590285439</Id>
 					<Name><![CDATA[P_Electrolyzer]]></Name>
-					<X>50</X><Y>-610</Y>
+					<Unit>J/s</Unit> 
+					<X>-120</X><Y>-920</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -340,7 +344,8 @@
 				<Variable Class="Parameter">
 					<Id>1770590347808</Id>
 					<Name><![CDATA[Eff_Electrolyzer]]></Name>
-					<X>70</X><Y>-560</Y>
+					<Unit></Unit> 
+					<X>-20</X><Y>-840</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -362,57 +367,10 @@
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1770590834351</Id>
-					<Name><![CDATA[M_Storage]]></Name>
-					<X>440</X><Y>-530</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[double]]></Type>
-						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
-						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[15000]]></Code>
-						</DefaultValue>
-						<ParameterEditor>
-							<Id>1770590834349</Id>
-							<EditorContolType>TEXT_BOX</EditorContolType>
-							<MinSliderValue><![CDATA[0]]></MinSliderValue>
-							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
-							<DelimeterType>NO_DELIMETER</DelimeterType>
-						</ParameterEditor>
-					</Properties>                 
-				</Variable>
-				<Variable Class="Parameter">
-					<Id>1770590855151</Id>
-					<Name><![CDATA[CP_Water]]></Name>
-					<X>570</X><Y>-530</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[double]]></Type>
-						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
-						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[4.18]]></Code>
-						</DefaultValue>
-						<ParameterEditor>
-							<Id>1770590855149</Id>
-							<EditorContolType>TEXT_BOX</EditorContolType>
-							<MinSliderValue><![CDATA[0]]></MinSliderValue>
-							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
-							<DelimeterType>NO_DELIMETER</DelimeterType>
-						</ParameterEditor>
-					</Properties>                 
-				</Variable>
-				<Variable Class="Parameter">
 					<Id>1770591136799</Id>
-					<Name><![CDATA[LHV_H2]]></Name>
-					<X>70</X><Y>-670</Y>
+					<Name><![CDATA[Delta_h]]></Name>
+					<Unit>J/mol</Unit> 
+					<X>-180</X><Y>-1080</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -422,7 +380,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[33.3]]></Code>
+							<Code><![CDATA[285840]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1770591136797</Id>
@@ -433,45 +391,115 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
+				<Variable Class="Parameter">
+					<Id>1771182394041</Id>
+					<Name><![CDATA[V_fish_tank]]></Name>
+					<Unit>l</Unit> 
+					<X>680</X><Y>-700</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[10000]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1771182394039</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1771182462320</Id>
+					<Name><![CDATA[ox_consum_fish]]></Name>
+					<Unit>mol/s</Unit> 
+					<X>820</X><Y>-700</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[400]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1771182462318</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1771184292118</Id>
+					<Name><![CDATA[m_greenhouse]]></Name>
+					<Unit>kg</Unit> 
+					<X>730</X><Y>-530</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[10000]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1771184292116</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1771184292123</Id>
+					<Name><![CDATA[cp_air]]></Name>
+					<Unit>J/(kg*K)</Unit> 
+					<X>760</X><Y>-490</Y>
+					<Label><X>15</X><Y>-5</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[1005]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1771184292121</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
 			</Variables>
 			<Dependences>
-				<Link SourceId="1770586694877" TargetId="1770586854860" Polarity="null">
-					<Height>20.0</Height>
+				<Link SourceId="1770590285439" TargetId="1771221716611" Polarity="null">
+					<Height>28.294</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-50</X><Y>90</Y></Direction>
-					<Id>1770589518269</Id>
-					<Name><![CDATA[Greenhouse_Temp - Plant_Growth_Rate]]></Name>
-					<X>660</X><Y>-420</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color>-11832691</Color>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1770586854860" TargetId="1770588654461" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>150</X><Y>-90</Y></Direction>
-					<Id>1770590000773</Id>
-					<Name><![CDATA[Plant_Growth_Rate - Heat_Consumption]]></Name>
-					<X>610</X><Y>-330</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color>-11832691</Color>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1770590285439" TargetId="1770585237500" Polarity="null">
-					<Height>40.969</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>210</X><Y>10</Y></Direction>
+					<Direction><X>280</X><Y>-120</Y></Direction>
 					<Id>1770591204302</Id>
-					<Name><![CDATA[P_Electrolyzer - H2_Production_Rate]]></Name>
-					<X>50</X><Y>-610</Y>
+					<Name><![CDATA[P_Electrolyzer - h2_in]]></Name>
+					<X>-120</X><Y>-920</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -480,13 +508,13 @@
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1770585237500" TargetId="1770581415133" Polarity="null">
-					<Height>20.0</Height>
+				<Link SourceId="1771221716611" TargetId="1770581415133" Polarity="null">
+					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-100</X><Y>-180</Y></Direction>
+					<Direction><X>0</X><Y>260</Y></Direction>
 					<Id>1770591350202</Id>
-					<Name><![CDATA[H2_Production_Rate - Ox_Production_Rate]]></Name>
-					<X>260</X><Y>-600</Y>
+					<Name><![CDATA[h2_in - Ox_Production_Rate]]></Name>
+					<X>160</X><Y>-1040</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -498,10 +526,10 @@
 				<Link SourceId="1770590285439" TargetId="1770585768460" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>120</X><Y>190</Y></Direction>
+					<Direction><X>290</X><Y>500</Y></Direction>
 					<Id>1770591420790</Id>
 					<Name><![CDATA[P_Electrolyzer - Heat_Production_Rate]]></Name>
-					<X>50</X><Y>-610</Y>
+					<X>-120</X><Y>-920</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -513,10 +541,10 @@
 				<Link SourceId="1770590347808" TargetId="1770585768460" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>100</X><Y>140</Y></Direction>
+					<Direction><X>190</X><Y>420</Y></Direction>
 					<Id>1770591447702</Id>
 					<Name><![CDATA[Eff_Electrolyzer - Heat_Production_Rate]]></Name>
-					<X>70</X><Y>-560</Y>
+					<X>-20</X><Y>-840</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -525,13 +553,13 @@
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1770591136799" TargetId="1770585237500" Polarity="null">
-					<Height>20.0</Height>
+				<Link SourceId="1770591136799" TargetId="1771221716611" Polarity="null">
+					<Height>37.629</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>190</X><Y>70</Y></Direction>
+					<Direction><X>340</X><Y>40</Y></Direction>
 					<Id>1770591578781</Id>
-					<Name><![CDATA[LHV_H2 - H2_Production_Rate]]></Name>
-					<X>70</X><Y>-670</Y>
+					<Name><![CDATA[Delta_h - h2_in]]></Name>
+					<X>-180</X><Y>-1080</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -540,13 +568,13 @@
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1770590347808" TargetId="1770585237500" Polarity="null">
+				<Link SourceId="1770590347808" TargetId="1771221716611" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>190</X><Y>-40</Y></Direction>
+					<Direction><X>180</X><Y>-200</Y></Direction>
 					<Id>1770591601949</Id>
-					<Name><![CDATA[Eff_Electrolyzer - H2_Production_Rate]]></Name>
-					<X>70</X><Y>-560</Y>
+					<Name><![CDATA[Eff_Electrolyzer - h2_in]]></Name>
+					<X>-20</X><Y>-840</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -555,13 +583,13 @@
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1770590834351" TargetId="1770586640387" Polarity="null">
-					<Height>-12.585</Height>
+				<Link SourceId="1771182394041" TargetId="1770580684116" Polarity="null">
+					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>60</X><Y>110</Y></Direction>
-					<Id>1770592101222</Id>
-					<Name><![CDATA[M_Storage - Heat_Transfer]]></Name>
-					<X>440</X><Y>-530</Y>
+					<Direction><X>110</X><Y>90</Y></Direction>
+					<Id>1771182422492</Id>
+					<Name><![CDATA[V_fish_tank - Fish_Tank_Oxygen]]></Name>
+					<X>680</X><Y>-700</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -570,133 +598,43 @@
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1770590855151" TargetId="1770586640387" Polarity="null">
+				<Link SourceId="1771182462320" TargetId="1770580684116" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-30</X><Y>90</Y></Direction>
+					<Id>1771182496859</Id>
+					<Name><![CDATA[ox_consum_fish - Fish_Tank_Oxygen]]></Name>
+					<X>820</X><Y>-700</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-11832691</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1771184292123" TargetId="1770586694877" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-100</X><Y>70</Y></Direction>
+					<Id>1771184338558</Id>
+					<Name><![CDATA[cp_air - Greenhouse_Temp]]></Name>
+					<X>760</X><Y>-490</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-11832691</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1771184292118" TargetId="1770586694877" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-70</X><Y>110</Y></Direction>
-					<Id>1770592104660</Id>
-					<Name><![CDATA[CP_Water - Heat_Transfer]]></Name>
-					<X>570</X><Y>-530</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color>-11832691</Color>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1770584954606" TargetId="1770586640387" Polarity="null">
-					<Height>-38.006</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>140</X><Y>0</Y></Direction>
-					<Id>1770592793619</Id>
-					<Name><![CDATA[Heat_Storage - Heat_Transfer]]></Name>
-					<X>360</X><Y>-420</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color>-11832691</Color>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1770590285439" TargetId="1770590913157" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>610</X><Y>-90</Y></Direction>
-					<Id>1770592865430</Id>
-					<Name><![CDATA[P_Electrolyzer - Total_System_Efficiency]]></Name>
-					<X>50</X><Y>-610</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color>-11832691</Color>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1770591136799" TargetId="1770590913157" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>590</X><Y>-30</Y></Direction>
-					<Id>1770592874780</Id>
-					<Name><![CDATA[LHV_H2 - Total_System_Efficiency]]></Name>
-					<X>70</X><Y>-670</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color>-11832691</Color>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1770586640387" TargetId="1770590913157" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>160</X><Y>-280</Y></Direction>
-					<Id>1770592885238</Id>
-					<Name><![CDATA[Heat_Transfer - Total_System_Efficiency]]></Name>
-					<X>500</X><Y>-420</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color>-11832691</Color>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1770581415133" TargetId="1770590913157" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>500</X><Y>80</Y></Direction>
-					<Id>1770592901742</Id>
-					<Name><![CDATA[Ox_Production_Rate - Total_System_Efficiency]]></Name>
-					<X>160</X><Y>-780</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color>-11832691</Color>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1770585237500" TargetId="1770590913157" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>400</X><Y>-100</Y></Direction>
-					<Id>1770593239797</Id>
-					<Name><![CDATA[H2_Production_Rate - Total_System_Efficiency]]></Name>
-					<X>260</X><Y>-600</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color>-11832691</Color>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1770590834351" TargetId="1770590913157" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>220</X><Y>-170</Y></Direction>
-					<Id>1770593251933</Id>
-					<Name><![CDATA[M_Storage - Total_System_Efficiency]]></Name>
-					<X>440</X><Y>-530</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color>-11832691</Color>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1770590855151" TargetId="1770590913157" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>90</X><Y>-170</Y></Direction>
-					<Id>1770593258845</Id>
-					<Name><![CDATA[CP_Water - Total_System_Efficiency]]></Name>
-					<X>570</X><Y>-530</Y>
+					<Id>1771184349827</Id>
+					<Name><![CDATA[m_greenhouse - Greenhouse_Temp]]></Name>
+					<X>730</X><Y>-530</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -742,238 +680,6 @@
 					<Z>0</Z>
 					<LevelVisibility>DIM_NON_CURRENT</LevelVisibility>
 
-			<Presentation>
-    			<TimePlot>
-					<Id>1770587331100</Id>
-					<Name><![CDATA[Resource_Stocks]]></Name>
-					<X>130</X><Y>-290</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<AutoUpdate>true</AutoUpdate>
-					<RecurrenceProperties>
-						<Id>1770587331098</Id>
-						<OccurrenceAtTime>true</OccurrenceAtTime>
-						<OccurrenceDate>1770624000000</OccurrenceDate>
-						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[0]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
-						</OccurrenceTime>
-						<RecurrenceCode Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
-						</RecurrenceCode>
-					</RecurrenceProperties>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Width>260</Width>
-					<Height>210</Height>
-					<BackgroundColor/>
-					<BorderColor/>
-					<ChartArea>
-						<XOffset>50</XOffset>
-						<YOffset>30</YOffset>
-						<Width>180</Width>
-						<Height>120</Height>
-						<BackgroundColor>-1</BackgroundColor>
-						<BorderColor>-16777216</BorderColor>
-						<GridColor>-12566464</GridColor>
-					</ChartArea>
-					<Legend>
-						<Place>SOUTH</Place>
-						<TextColor>-16777216</TextColor>
-						<Size>30</Size>
-					</Legend>
-					<Labels>
-						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
-						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
-						<TextColor>-12566464</TextColor>
-					</Labels>
-					<ShowLegend>true</ShowLegend>
-					<TimeWindowsMovementType>MOVEMENT_WITH_TIME</TimeWindowsMovementType>		
-					<TimeWindowUnits>MODEL_TIME_UNIT</TimeWindowUnits>
-					<VerScaleFromExpression><![CDATA[0]]></VerScaleFromExpression>
-					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
-					<VerScaleType>AUTO</VerScaleType>
-					<DrawLine>true</DrawLine>
-					<Interpolation>LINEAR</Interpolation>
-					<DatasetExpression>  
-						<Title><![CDATA[Heat Inventory]]></Title>
-					<Id>1770587397093</Id>
-					<Expression><![CDATA[my_dataset1]]></Expression>
-					<Color>-65536</Color>
-					<Expression2><![CDATA[Heat_Storage]]></Expression2>
-					<Expression2Flag>true</Expression2Flag>
-						<PointStyle>NONE</PointStyle>
-						<LineWidth>1.0</LineWidth>
-					</DatasetExpression>
-					<DatasetExpression>  
-						<Title><![CDATA[Oxygen Inventory]]></Title>
-					<Id>1770587332692</Id>
-					<Expression><![CDATA[my_dataset]]></Expression>
-					<Color>-14774017</Color>
-					<Expression2><![CDATA[Oxygen_Buffer]]></Expression2>
-					<Expression2Flag>true</Expression2Flag>
-						<PointStyle>NONE</PointStyle>
-						<LineWidth>1.0</LineWidth>
-					</DatasetExpression>
-					<SamplesToKeep>100</SamplesToKeep>
-					<TimeWindowExpression><![CDATA[100]]></TimeWindowExpression>
-					<FillAreaUnderLine>false</FillAreaUnderLine>
-					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
-    			</TimePlot>
-    			<TimePlot>
-					<Id>1770594498729</Id>
-					<Name><![CDATA[Production_Performance]]></Name>
-					<X>400</X><Y>-290</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<AutoUpdate>true</AutoUpdate>
-					<RecurrenceProperties>
-						<Id>1770594498727</Id>
-						<OccurrenceAtTime>true</OccurrenceAtTime>
-						<OccurrenceDate>1770624000000</OccurrenceDate>
-						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[0]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
-						</OccurrenceTime>
-						<RecurrenceCode Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
-						</RecurrenceCode>
-					</RecurrenceProperties>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Width>260</Width>
-					<Height>210</Height>
-					<BackgroundColor/>
-					<BorderColor/>
-					<ChartArea>
-						<XOffset>50</XOffset>
-						<YOffset>30</YOffset>
-						<Width>180</Width>
-						<Height>120</Height>
-						<BackgroundColor>-1</BackgroundColor>
-						<BorderColor>-16777216</BorderColor>
-						<GridColor>-12566464</GridColor>
-					</ChartArea>
-					<Legend>
-						<Place>SOUTH</Place>
-						<TextColor>-16777216</TextColor>
-						<Size>30</Size>
-					</Legend>
-					<Labels>
-						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
-						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
-						<TextColor>-12566464</TextColor>
-					</Labels>
-					<ShowLegend>true</ShowLegend>
-					<TimeWindowsMovementType>MOVEMENT_WITH_TIME</TimeWindowsMovementType>		
-					<TimeWindowUnits>MODEL_TIME_UNIT</TimeWindowUnits>
-					<VerScaleFromExpression><![CDATA[0]]></VerScaleFromExpression>
-					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
-					<VerScaleType>AUTO</VerScaleType>
-					<DrawLine>true</DrawLine>
-					<Interpolation>LINEAR</Interpolation>
-					<DatasetExpression>  
-						<Title><![CDATA[H2 Rate]]></Title>
-					<Id>1770594501010</Id>
-					<Expression><![CDATA[my_dataset]]></Expression>
-					<Color>-16711936</Color>
-					<Expression2><![CDATA[H2_Production_Rate]]></Expression2>
-					<Expression2Flag>true</Expression2Flag>
-						<PointStyle>NONE</PointStyle>
-						<LineWidth>1.0</LineWidth>
-					</DatasetExpression>
-					<DatasetExpression>  
-						<Title><![CDATA[Plant Growth]]></Title>
-					<Id>1770594535170</Id>
-					<Expression><![CDATA[my_dataset1]]></Expression>
-					<Color>-16751616</Color>
-					<Expression2><![CDATA[Plant_Growth_Rate]]></Expression2>
-					<Expression2Flag>true</Expression2Flag>
-						<PointStyle>NONE</PointStyle>
-						<LineWidth>1.0</LineWidth>
-					</DatasetExpression>
-					<SamplesToKeep>100</SamplesToKeep>
-					<TimeWindowExpression><![CDATA[100]]></TimeWindowExpression>
-					<FillAreaUnderLine>false</FillAreaUnderLine>
-					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
-    			</TimePlot>
-    			<TimePlot>
-					<Id>1770594598207</Id>
-					<Name><![CDATA[Net_System_Efficiency]]></Name>
-					<X>660</X><Y>-290</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<AutoUpdate>true</AutoUpdate>
-					<RecurrenceProperties>
-						<Id>1770594598205</Id>
-						<OccurrenceAtTime>true</OccurrenceAtTime>
-						<OccurrenceDate>1770624000000</OccurrenceDate>
-						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[0]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
-						</OccurrenceTime>
-						<RecurrenceCode Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
-						</RecurrenceCode>
-					</RecurrenceProperties>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Width>260</Width>
-					<Height>210</Height>
-					<BackgroundColor/>
-					<BorderColor/>
-					<ChartArea>
-						<XOffset>50</XOffset>
-						<YOffset>30</YOffset>
-						<Width>180</Width>
-						<Height>120</Height>
-						<BackgroundColor>-1</BackgroundColor>
-						<BorderColor>-16777216</BorderColor>
-						<GridColor>-12566464</GridColor>
-					</ChartArea>
-					<Legend>
-						<Place>SOUTH</Place>
-						<TextColor>-16777216</TextColor>
-						<Size>30</Size>
-					</Legend>
-					<Labels>
-						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
-						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
-						<TextColor>-12566464</TextColor>
-					</Labels>
-					<ShowLegend>true</ShowLegend>
-					<TimeWindowsMovementType>MOVEMENT_WITH_TIME</TimeWindowsMovementType>		
-					<TimeWindowUnits>MODEL_TIME_UNIT</TimeWindowUnits>
-					<VerScaleFromExpression><![CDATA[0]]></VerScaleFromExpression>
-					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
-					<VerScaleType>AUTO</VerScaleType>
-					<DrawLine>true</DrawLine>
-					<Interpolation>LINEAR</Interpolation>
-					<DatasetExpression>  
-						<Title><![CDATA[Overall Efficiency]]></Title>
-					<Id>1770594599600</Id>
-					<Expression><![CDATA[my_dataset]]></Expression>
-					<Color>-256</Color>
-					<Expression2><![CDATA[Total_System_Efficiency]]></Expression2>
-					<Expression2Flag>true</Expression2Flag>
-						<PointStyle>NONE</PointStyle>
-						<LineWidth>1.0</LineWidth>
-					</DatasetExpression>
-					<SamplesToKeep>100</SamplesToKeep>
-					<TimeWindowExpression><![CDATA[100]]></TimeWindowExpression>
-					<FillAreaUnderLine>false</FillAreaUnderLine>
-					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
-    			</TimePlot>
-			</Presentation>
 
 				</Level>
 			</Presentation>
@@ -1074,13 +780,19 @@
 					<ParameterName><![CDATA[Eff_Electrolyzer]]></ParameterName>
 				</Parameter>
 				<Parameter>
-					<ParameterName><![CDATA[M_Storage]]></ParameterName>
+					<ParameterName><![CDATA[Delta_h]]></ParameterName>
 				</Parameter>
 				<Parameter>
-					<ParameterName><![CDATA[CP_Water]]></ParameterName>
+					<ParameterName><![CDATA[V_fish_tank]]></ParameterName>
 				</Parameter>
 				<Parameter>
-					<ParameterName><![CDATA[LHV_H2]]></ParameterName>
+					<ParameterName><![CDATA[ox_consum_fish]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[m_greenhouse]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[cp_air]]></ParameterName>
 				</Parameter>
 			</Parameters>
 			<PresentationProperties>
