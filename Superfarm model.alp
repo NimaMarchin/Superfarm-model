@@ -206,7 +206,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties TargetId="1770580753749" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[h2_in*2]]></Formula>
+						<Formula><![CDATA[h2_in/2]]></Formula>
 						<Color>-14774017</Color>
 						<ValveIndex>1</ValveIndex>
 						<Points>
