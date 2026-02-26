@@ -7,7 +7,7 @@
 <AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.9.7.202512121156" AlpVersion="8.9.7">
 <Model>
 	<Id>1769865394861</Id>
-	<Name><![CDATA[Superfarm model]]></Name>
+	<Name><![CDATA[Modified Superfarm model 1]]></Name>
 	<EngineVersion>6</EngineVersion>
 	<JavaPackageName><![CDATA[superfarm_model_test]]></JavaPackageName>
 	<ModelTimeUnit><![CDATA[Hour]]></ModelTimeUnit>
@@ -123,7 +123,7 @@
 					<Width>20</Width>
 					<Height>20</Height>
 						<Expression><![CDATA[(ox_out-ox_consum_fish)/V_fish_tank]]></Expression>
-						<InitialValue><![CDATA[0.0005]]></InitialValue>
+						<InitialValue><![CDATA[0.00025]]></InitialValue>
 						<Color>-16776961</Color>
 					</Properties>
 				</Variable>
@@ -206,7 +206,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties TargetId="1770580753749" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[h2_in*2]]></Formula>
+						<Formula><![CDATA[h2_in*0.5]]></Formula>
 						<Color>-14774017</Color>
 						<ValveIndex>1</ValveIndex>
 						<Points>
@@ -221,16 +221,17 @@
 					<Name><![CDATA[ox_out]]></Name>
 					<Unit>mol/s</Unit> 
 					<X>260</X><Y>-780</Y>
-					<Label><X>-20</X><Y>-110</Y></Label>
+					<Label><X>0</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SourceId="1770580753749" TargetId="1770580684116" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[0.02]]></Formula>
+						<Formula><![CDATA[0.0025]]></Formula>
 						<Color>-14774017</Color>
-						<ValveIndex>1</ValveIndex>
+						<ValveIndex>2</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>144</X><Y>0</Y></Point>
 							<Point><X>160</X><Y>0</Y></Point>
 							<Point><X>530</X><Y>170</Y></Point>
 						</Points>
@@ -430,7 +431,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[400]]></Code>
+							<Code><![CDATA[0.002]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1771182462318</Id>
