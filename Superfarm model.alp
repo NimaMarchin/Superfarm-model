@@ -122,7 +122,7 @@
 					<EquationStyle>custom</EquationStyle>
 					<Width>20</Width>
 					<Height>20</Height>
-						<Expression><![CDATA[(O2_tank_in-ox_consum_fish)/V_tank]]></Expression>
+						<Expression><![CDATA[(O2_tank_in-O2_consum_fish)/V_tank]]></Expression>
 						<InitialValue><![CDATA[0.1875]]></InitialValue>
 						<Color>-16776961</Color>
 					</Properties>
@@ -480,7 +480,7 @@
 				</Variable>
 				<Variable Class="Parameter">
 					<Id>1771182462320</Id>
-					<Name><![CDATA[ox_consum_fish]]></Name>
+					<Name><![CDATA[O2_consum_fish]]></Name>
 					<Unit>mol/time</Unit> 
 					<X>760</X><Y>-820</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -743,7 +743,7 @@
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-160</X><Y>40</Y></Direction>
 					<Id>1771182496859</Id>
-					<Name><![CDATA[ox_consum_fish - O2_conc_tank]]></Name>
+					<Name><![CDATA[O2_consum_fish - O2_conc_tank]]></Name>
 					<X>760</X><Y>-820</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -998,7 +998,7 @@
 					<ParameterName><![CDATA[cp_water]]></ParameterName>
 				</Parameter>
 				<Parameter>
-					<ParameterName><![CDATA[ox_consum_fish]]></ParameterName>
+					<ParameterName><![CDATA[O2_consum_fish]]></ParameterName>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[rho_air]]></ParameterName>
