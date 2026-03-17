@@ -112,7 +112,6 @@
 				<Variable Class="AuxVariable">
 					<Id>1773397897426</Id>
 					<Name><![CDATA[H2_prod_kg_hr]]></Name>
-					<Unit>kg/hour</Unit> 
 					<X>200</X><Y>-1130</Y>
 					<Label><X>-20</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -128,7 +127,6 @@
 				<Variable Class="AuxVariable">
 					<Id>1773399001423</Id>
 					<Name><![CDATA[O2_prod_kg_hr]]></Name>
-					<Unit>kg/hour</Unit> 
 					<X>210</X><Y>-850</Y>
 					<Label><X>-30</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -144,7 +142,6 @@
 				<Variable Class="AuxVariable">
 					<Id>1773399192072</Id>
 					<Name><![CDATA[H2_store_kg]]></Name>
-					<Unit>kg</Unit> 
 					<X>310</X><Y>-1130</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -160,7 +157,6 @@
 				<Variable Class="AuxVariable">
 					<Id>1773399424792</Id>
 					<Name><![CDATA[O2_store_kg]]></Name>
-					<Unit>kg</Unit> 
 					<X>310</X><Y>-850</Y>
 					<Label><X>-5</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -176,7 +172,6 @@
 				<Variable Class="AuxVariable">
 					<Id>1773399774950</Id>
 					<Name><![CDATA[O2_tank_in_kg_hr]]></Name>
-					<Unit>kg/hour</Unit> 
 					<X>470</X><Y>-850</Y>
 					<Label><X>-20</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -192,7 +187,6 @@
 				<Variable Class="AuxVariable">
 					<Id>1773400055254</Id>
 					<Name><![CDATA[O2_conc_tank_mg_m3]]></Name>
-					<Unit>mg/m3</Unit> 
 					<X>650</X><Y>-850</Y>
 					<Label><X>-20</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -202,6 +196,21 @@
 						<Formula><![CDATA[O2_conc_tank * 32 * 1000]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color>-16776961</Color>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1773788847011</Id>
+					<Name><![CDATA[O2_consump_mg_per_kg_hr]]></Name>
+					<X>830</X><Y>-920</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[O2_consump_per_kg_s * 32 * 1000 * 3600]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color>-4073239</Color>
 					</Properties>
 
 				</Variable>
@@ -766,7 +775,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.0000026]]></Code>
+							<Code><![CDATA[0.000003038]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1773172313039</Id>
@@ -1071,6 +1080,21 @@
 					<Id>1773400129238</Id>
 					<Name><![CDATA[O2_conc_tank - O2_conc_tank_mg_m3]]></Name>
 					<X>600</X><Y>-780</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-11832691</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1773172313041" TargetId="1773788847011" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>0</X><Y>-50</Y></Direction>
+					<Id>1773789020674</Id>
+					<Name><![CDATA[O2_consump_per_kg_s - O2_consump_mg_per_kg_hr]]></Name>
+					<X>830</X><Y>-870</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1496,14 +1520,6 @@
 			<BypassInitialScreen>true</BypassInitialScreen>
 		</SimulationExperiment>	
 	</Experiments>
-	<ModelResources>
-		<Resource>
-			<Id>1773235604368</Id>
-			<Path><![CDATA[wind_farm_raw.xlsx]]></Path>
-			<ReferencedFromUserCode>false</ReferencedFromUserCode>
-			<Location>FILE_SYSTEM</Location>
-		</Resource>
-	</ModelResources>
     <RequiredLibraryReference>
 		<LibraryName><![CDATA[com.anylogic.libraries.modules.markup_descriptors]]></LibraryName>
 		<VersionMajor>1</VersionMajor>
