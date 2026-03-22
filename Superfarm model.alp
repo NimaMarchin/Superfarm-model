@@ -921,7 +921,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[276.15]]></Code>
+							<Code><![CDATA[259.15]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1774122701193</Id>
