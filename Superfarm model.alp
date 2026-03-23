@@ -249,6 +249,7 @@
 				<Variable Class="AuxVariable">
 					<Id>1774128011033</Id>
 					<Name><![CDATA[O2_consum_fish]]></Name>
+					<Unit>mol/time</Unit> 
 					<X>830</X><Y>-800</Y>
 					<Label><X>5</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -717,7 +718,7 @@
 					<Id>1772132019215</Id>
 					<Name><![CDATA[rho_air]]></Name>
 					<Description><![CDATA[density of the water; water, not H2O because fish, nutrients etc. part of density value]]></Description>
-					<Unit>kg/m3 </Unit> 
+					<Unit>kg/(m*m*m) </Unit> 
 					<X>700</X><Y>-480</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
