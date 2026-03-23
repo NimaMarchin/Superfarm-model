@@ -261,6 +261,38 @@
 					</Properties>
 
 				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1774293142671</Id>
+					<Name><![CDATA[V_greenhouse]]></Name>
+					<Unit>m*m*m</Unit> 
+					<X>740</X><Y>-440</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[l_greenhouse*h_greenhouse*w_greenhouse]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color>-4073239</Color>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1774293511950</Id>
+					<Name><![CDATA[dT_greenhouse]]></Name>
+					<Unit>K</Unit> 
+					<X>1260</X><Y>-300</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[T_greenhouse-T_outdoor]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color>-4073239</Color>
+					</Properties>
+
+				</Variable>
 				<Variable Class="StockVariable">
 					<Id>1770580684116</Id>
 					<Name><![CDATA[O2_conc_tank]]></Name>
@@ -300,7 +332,7 @@
 					<Id>1770584954606</Id>
 					<Name><![CDATA[Q_store]]></Name>
 					<Unit>J</Unit> 
-					<X>260</X><Y>-420</Y>
+					<X>260</X><Y>-340</Y>
 					<Label><X>-30</X><Y>40</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -318,7 +350,7 @@
 					<Id>1770586694877</Id>
 					<Name><![CDATA[T_greenhouse]]></Name>
 					<Unit>K</Unit> 
-					<X>600</X><Y>-420</Y>
+					<X>600</X><Y>-340</Y>
 					<Label><X>-45</X><Y>40</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -328,7 +360,7 @@
 					<Width>20</Width>
 					<Height>20</Height>
 						<Expression><![CDATA[(Q_greenhouse_in-Q_diss_greenhouse)/(V_greenhouse*rho_air*cp_air)]]></Expression>
-						<InitialValue><![CDATA[298]]></InitialValue>
+						<InitialValue><![CDATA[290.15]]></InitialValue>
 						<Color>-65536</Color>
 					</Properties>
 				</Variable>
@@ -412,7 +444,7 @@
 					<Id>1770585768460</Id>
 					<Name><![CDATA[Q_prod]]></Name>
 					<Unit>J/time</Unit> 
-					<X>60</X><Y>-420</Y>
+					<X>60</X><Y>-340</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -432,7 +464,7 @@
 					<Id>1770586640387</Id>
 					<Name><![CDATA[Q_greenhouse_in]]></Name>
 					<Unit>J/time</Unit> 
-					<X>260</X><Y>-420</Y>
+					<X>260</X><Y>-340</Y>
 					<Label><X>-60</X><Y>-30</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -453,18 +485,18 @@
 					<Id>1770588654461</Id>
 					<Name><![CDATA[Q_diss_greenhouse]]></Name>
 					<Unit>J/time</Unit> 
-					<X>600</X><Y>-420</Y>
+					<X>600</X><Y>-340</Y>
 					<Label><X>-10</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SourceId="1770586694877" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[500]]></Formula>
+						<Formula><![CDATA[A_greenhouse*avg_U_value_greenhouse*dT_greenhouse]]></Formula>
 						<Color>-8388608</Color>
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>160</X><Y>0</Y></Point>
+							<Point><X>180</X><Y>0</Y></Point>
 							<Point><X>280</X><Y>0</Y></Point>
 						</Points>
 					</Properties>
@@ -493,7 +525,7 @@
 					<Id>1772102787207</Id>
 					<Name><![CDATA[Q_tank_in]]></Name>
 					<Unit>J/time</Unit> 
-					<X>260</X><Y>-420</Y>
+					<X>260</X><Y>-340</Y>
 					<Label><X>10</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -504,8 +536,8 @@
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>0</X><Y>-180</Y></Point>
-							<Point><X>340</X><Y>-180</Y></Point>
+							<Point><X>0</X><Y>-260</Y></Point>
+							<Point><X>340</X><Y>-260</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
@@ -605,35 +637,10 @@
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1771184292118</Id>
-					<Name><![CDATA[V_greenhouse]]></Name>
-					<Unit>m3</Unit> 
-					<X>730</X><Y>-530</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[double]]></Type>
-						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
-						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[1500]]></Code>
-						</DefaultValue>
-						<ParameterEditor>
-							<Id>1771184292116</Id>
-							<EditorContolType>TEXT_BOX</EditorContolType>
-							<MinSliderValue><![CDATA[0]]></MinSliderValue>
-							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
-							<DelimeterType>NO_DELIMETER</DelimeterType>
-						</ParameterEditor>
-					</Properties>                 
-				</Variable>
-				<Variable Class="Parameter">
 					<Id>1771184292123</Id>
 					<Name><![CDATA[cp_air]]></Name>
 					<Unit>J/(kg*K)</Unit> 
-					<X>760</X><Y>-490</Y>
+					<X>760</X><Y>-410</Y>
 					<Label><X>15</X><Y>-5</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -711,7 +718,7 @@
 					<Name><![CDATA[rho_air]]></Name>
 					<Description><![CDATA[density of the water; water, not H2O because fish, nutrients etc. part of density value]]></Description>
 					<Unit>kg/m3 </Unit> 
-					<X>700</X><Y>-560</Y>
+					<X>700</X><Y>-480</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -911,7 +918,7 @@
 					<Id>1774122701195</Id>
 					<Name><![CDATA[T_outdoor]]></Name>
 					<Unit>K</Unit> 
-					<X>1160</X><Y>-670</Y>
+					<X>1160</X><Y>-680</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -925,6 +932,131 @@
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1774122701193</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1774292803329</Id>
+					<Name><![CDATA[l_greenhouse]]></Name>
+					<Unit>m</Unit> 
+					<X>920</X><Y>-440</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[87.830]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1774292803327</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1774292803372</Id>
+					<Name><![CDATA[h_greenhouse]]></Name>
+					<Unit>m</Unit> 
+					<X>1060</X><Y>-440</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[87.830]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1774292803370</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1774292803377</Id>
+					<Name><![CDATA[w_greenhouse]]></Name>
+					<Unit>m</Unit> 
+					<X>1180</X><Y>-440</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[87.830]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1774292803375</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1774293330509</Id>
+					<Name><![CDATA[A_greenhouse]]></Name>
+					<Unit>m*m</Unit> 
+					<X>1060</X><Y>-380</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[2*l_greenhouse*h_greenhouse+2*w_greenhouse*l_greenhouse+2*w_greenhouse*h_greenhouse]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1774293330507</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1774293511948</Id>
+					<Name><![CDATA[avg_U_value_greenhouse]]></Name>
+					<Unit>J/(time*m*m*K)</Unit> 
+					<X>1020</X><Y>-320</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[0.18]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1774293511946</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -967,7 +1099,7 @@
 				<Link SourceId="1770590285439" TargetId="1770585768460" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>290</X><Y>500</Y></Direction>
+					<Direction><X>290</X><Y>580</Y></Direction>
 					<Id>1770591420790</Id>
 					<Name><![CDATA[P_Electrolyzer - Q_prod]]></Name>
 					<X>-120</X><Y>-920</Y>
@@ -982,7 +1114,7 @@
 				<Link SourceId="1770590347808" TargetId="1770585768460" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>190</X><Y>420</Y></Direction>
+					<Direction><X>190</X><Y>500</Y></Direction>
 					<Id>1770591447702</Id>
 					<Name><![CDATA[Eff_Electrolyzer - Q_prod]]></Name>
 					<X>-20</X><Y>-840</Y>
@@ -1030,7 +1162,7 @@
 					<Direction><X>-160</X><Y>70</Y></Direction>
 					<Id>1771184338558</Id>
 					<Name><![CDATA[cp_air - T_greenhouse]]></Name>
-					<X>760</X><Y>-490</Y>
+					<X>760</X><Y>-410</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1039,13 +1171,13 @@
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1771184292118" TargetId="1770586694877" Polarity="null">
+				<Link SourceId="1774293142671" TargetId="1770586694877" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-130</X><Y>110</Y></Direction>
+					<Direction><X>-140</X><Y>100</Y></Direction>
 					<Id>1771184349827</Id>
 					<Name><![CDATA[V_greenhouse - T_greenhouse]]></Name>
-					<X>730</X><Y>-530</Y>
+					<X>740</X><Y>-440</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1090,7 +1222,7 @@
 					<Direction><X>-100</X><Y>140</Y></Direction>
 					<Id>1772132050240</Id>
 					<Name><![CDATA[rho_air - T_greenhouse]]></Name>
-					<X>700</X><Y>-560</Y>
+					<X>700</X><Y>-480</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1207,10 +1339,10 @@
 				<Link SourceId="1774122701195" TargetId="1774122936723" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>0</X><Y>60</Y></Direction>
+					<Direction><X>0</X><Y>70</Y></Direction>
 					<Id>1774122979401</Id>
 					<Name><![CDATA[T_outdoor - dT_tank]]></Name>
-					<X>1160</X><Y>-670</Y>
+					<X>1160</X><Y>-680</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1399,6 +1531,126 @@
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
+				<Link SourceId="1774292803329" TargetId="1774293142671" Polarity="null">
+					<Height>13.334</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-180</X><Y>0</Y></Direction>
+					<Id>1774293105616</Id>
+					<Name><![CDATA[l_greenhouse - V_greenhouse]]></Name>
+					<X>920</X><Y>-440</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-11832691</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1774292803377" TargetId="1774293142671" Polarity="null">
+					<Height>29.462</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-440</X><Y>0</Y></Direction>
+					<Id>1774293207975</Id>
+					<Name><![CDATA[w_greenhouse - V_greenhouse]]></Name>
+					<X>1180</X><Y>-440</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-11832691</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1774292803372" TargetId="1774293142671" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-320</X><Y>0</Y></Direction>
+					<Id>1774293241722</Id>
+					<Name><![CDATA[h_greenhouse - V_greenhouse]]></Name>
+					<X>1060</X><Y>-440</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-11832691</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1774293330509" TargetId="1770588654461" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-280</X><Y>40</Y></Direction>
+					<Id>1774293485664</Id>
+					<Name><![CDATA[A_greenhouse - Q_diss_greenhouse]]></Name>
+					<X>1060</X><Y>-380</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-11832691</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1774122701195" TargetId="1774293511950" Polarity="null">
+					<Height>117.947</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>100</X><Y>380</Y></Direction>
+					<Id>1774293539031</Id>
+					<Name><![CDATA[T_outdoor - dT_greenhouse]]></Name>
+					<X>1160</X><Y>-680</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-11832691</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1774293511948" TargetId="1770588654461" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-240</X><Y>-20</Y></Direction>
+					<Id>1774293587585</Id>
+					<Name><![CDATA[avg_U_value_greenhouse - Q_diss_greenhouse]]></Name>
+					<X>1020</X><Y>-320</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-11832691</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1770586694877" TargetId="1774293511950" Polarity="null">
+					<Height>-105.021</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>660</X><Y>40</Y></Direction>
+					<Id>1774293614375</Id>
+					<Name><![CDATA[T_greenhouse - dT_greenhouse]]></Name>
+					<X>600</X><Y>-340</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-11832691</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1774293511950" TargetId="1770588654461" Polarity="null">
+					<Height>60.466</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-480</X><Y>-40</Y></Direction>
+					<Id>1774293875456</Id>
+					<Name><![CDATA[dT_greenhouse - Q_diss_greenhouse]]></Name>
+					<X>1260</X><Y>-300</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-11832691</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
 			</Dependences>
 			<AgentLinks>
 				<AgentLink>
@@ -1440,7 +1692,7 @@
     			<TimePlot>
 					<Id>1773401137226</Id>
 					<Name><![CDATA[Hydrogen_and_Oxygen_Production_Rate]]></Name>
-					<X>230</X><Y>-290</Y>
+					<X>220</X><Y>-180</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1520,7 +1772,7 @@
     			<TimePlot>
 					<Id>1773403228662</Id>
 					<Name><![CDATA[Hydrogen_and_Oxygen_Storage]]></Name>
-					<X>540</X><Y>-290</Y>
+					<X>540</X><Y>-180</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1600,7 +1852,7 @@
     			<TimePlot>
 					<Id>1773403318110</Id>
 					<Name><![CDATA[Oxygen_Concentration_in_Tank]]></Name>
-					<X>840</X><Y>-290</Y>
+					<X>840</X><Y>-180</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1771,9 +2023,6 @@
 					<ParameterName><![CDATA[Delta_h]]></ParameterName>
 				</Parameter>
 				<Parameter>
-					<ParameterName><![CDATA[V_greenhouse]]></ParameterName>
-				</Parameter>
-				<Parameter>
 					<ParameterName><![CDATA[cp_air]]></ParameterName>
 				</Parameter>
 				<Parameter>
@@ -1808,6 +2057,21 @@
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[T_outdoor]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[l_greenhouse]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[h_greenhouse]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[w_greenhouse]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[A_greenhouse]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[avg_U_value_greenhouse]]></ParameterName>
 				</Parameter>
 			</Parameters>
 			<PresentationProperties>
