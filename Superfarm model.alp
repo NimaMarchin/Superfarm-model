@@ -214,7 +214,6 @@
 					</Properties>
 
 				</Variable>
-				<!-- HEAD: dT_tank -->
 				<Variable Class="AuxVariable">
 					<Id>1774122936723</Id>
 					<Name><![CDATA[dT_tank]]></Name>
@@ -231,7 +230,6 @@
 					</Properties>
 
 				</Variable>
-				<!-- HEAD: V_tank -->
 				<Variable Class="AuxVariable">
 					<Id>1774127572981</Id>
 					<Name><![CDATA[V_tank]]></Name>
@@ -248,7 +246,6 @@
 					</Properties>
 
 				</Variable>
-				<!-- HEAD: O2_consum_fish -->
 				<Variable Class="AuxVariable">
 					<Id>1774128011033</Id>
 					<Name><![CDATA[O2_consum_fish]]></Name>
@@ -265,7 +262,6 @@
 					</Properties>
 
 				</Variable>
-				<!-- HEAD: V_greenhouse -->
 				<Variable Class="AuxVariable">
 					<Id>1774293142671</Id>
 					<Name><![CDATA[V_greenhouse]]></Name>
@@ -282,7 +278,6 @@
 					</Properties>
 
 				</Variable>
-				<!-- HEAD: dT_greenhouse -->
 				<Variable Class="AuxVariable">
 					<Id>1774293511950</Id>
 					<Name><![CDATA[dT_greenhouse]]></Name>
@@ -299,7 +294,6 @@
 					</Properties>
 
 				</Variable>
-				<!-- HEAD: et_tank -->
 				<Variable Class="AuxVariable">
 					<Id>1774432301301</Id>
 					<Name><![CDATA[et_tank]]></Name>
@@ -316,7 +310,6 @@
 					</Properties>
 
 				</Variable>
-				<!-- HEAD: et_greenhouse -->
 				<Variable Class="AuxVariable">
 					<Id>1774432714126</Id>
 					<Name><![CDATA[et_greenhouse]]></Name>
@@ -333,7 +326,6 @@
 					</Properties>
 
 				</Variable>
-				<!-- HEAD: et_O2 -->
 				<Variable Class="AuxVariable">
 					<Id>1774436215761</Id>
 					<Name><![CDATA[et_O2]]></Name>
@@ -350,11 +342,10 @@
 					</Properties>
 
 				</Variable>
-				<!-- Savings: Revenue_H2 -->
 				<Variable Class="AuxVariable">
 					<Id>1774358868817</Id>
 					<Name><![CDATA[Revenue_H2]]></Name>
-					<X>-380</X><Y>-640</Y>
+					<X>80</X><Y>800</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -366,11 +357,10 @@
 					</Properties>
 
 				</Variable>
-				<!-- Savings: Saving_O2 -->
 				<Variable Class="AuxVariable">
 					<Id>1774359474864</Id>
 					<Name><![CDATA[Saving_O2]]></Name>
-					<X>-380</X><Y>-740</Y>
+					<X>80</X><Y>700</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -382,11 +372,10 @@
 					</Properties>
 
 				</Variable>
-				<!-- Savings: Saving_Heat -->
 				<Variable Class="AuxVariable">
 					<Id>1774359643936</Id>
 					<Name><![CDATA[Saving_Heat]]></Name>
-					<X>-380</X><Y>-800</Y>
+					<X>80</X><Y>640</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -398,12 +387,11 @@
 					</Properties>
 
 				</Variable>
-				<!-- Savings: P_Electrolyzer as AuxVariable (Wind_Profile driven) -->
 				<Variable Class="AuxVariable">
 					<Id>1774446845478</Id>
 					<Name><![CDATA[P_Electrolyzer]]></Name>
 					<Unit>J/time</Unit> 
-					<X>-120</X><Y>-920</Y>
+					<X>340</X><Y>520</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -886,7 +874,6 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
-				<!-- HEAD: avg_U_value_tank -->
 				<Variable Class="Parameter">
 					<Id>1774119410985</Id>
 					<Name><![CDATA[avg_U_value_tank]]></Name>
@@ -912,7 +899,6 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
-				<!-- HEAD: l_tank -->
 				<Variable Class="Parameter">
 					<Id>1774120052773</Id>
 					<Name><![CDATA[l_tank]]></Name>
@@ -938,7 +924,6 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
-				<!-- HEAD: h_tank -->
 				<Variable Class="Parameter">
 					<Id>1774120072479</Id>
 					<Name><![CDATA[h_tank]]></Name>
@@ -964,7 +949,6 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
-				<!-- HEAD: w_tank -->
 				<Variable Class="Parameter">
 					<Id>1774120083603</Id>
 					<Name><![CDATA[w_tank]]></Name>
@@ -990,7 +974,6 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
-				<!-- HEAD: A_tank -->
 				<Variable Class="Parameter">
 					<Id>1774122233896</Id>
 					<Name><![CDATA[A_tank]]></Name>
@@ -1016,7 +999,6 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
-				<!-- HEAD: T_outdoor -->
 				<Variable Class="Parameter">
 					<Id>1774122701195</Id>
 					<Name><![CDATA[T_outdoor]]></Name>
@@ -1042,7 +1024,6 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
-				<!-- HEAD: l_greenhouse -->
 				<Variable Class="Parameter">
 					<Id>1774292803329</Id>
 					<Name><![CDATA[l_greenhouse]]></Name>
@@ -1068,7 +1049,6 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
-				<!-- HEAD: h_greenhouse -->
 				<Variable Class="Parameter">
 					<Id>1774292803372</Id>
 					<Name><![CDATA[h_greenhouse]]></Name>
@@ -1094,7 +1074,6 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
-				<!-- HEAD: w_greenhouse -->
 				<Variable Class="Parameter">
 					<Id>1774292803377</Id>
 					<Name><![CDATA[w_greenhouse]]></Name>
@@ -1120,7 +1099,6 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
-				<!-- HEAD: A_greenhouse -->
 				<Variable Class="Parameter">
 					<Id>1774293330509</Id>
 					<Name><![CDATA[A_greenhouse]]></Name>
@@ -1146,7 +1124,6 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
-				<!-- HEAD: avg_U_value_greenhouse -->
 				<Variable Class="Parameter">
 					<Id>1774293511948</Id>
 					<Name><![CDATA[avg_U_value_greenhouse]]></Name>
@@ -1172,7 +1149,6 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
-				<!-- HEAD: T_set_tank -->
 				<Variable Class="Parameter">
 					<Id>1774430016406</Id>
 					<Name><![CDATA[T_set_tank]]></Name>
@@ -1198,7 +1174,6 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
-				<!-- HEAD: T_set_greenhouse -->
 				<Variable Class="Parameter">
 					<Id>1774430049862</Id>
 					<Name><![CDATA[T_set_greenhouse]]></Name>
@@ -1224,7 +1199,6 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
-				<!-- HEAD: Kp_tank -->
 				<Variable Class="Parameter">
 					<Id>1774432297905</Id>
 					<Name><![CDATA[Kp_tank]]></Name>
@@ -1250,7 +1224,6 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
-				<!-- HEAD: Kp_greenhouse -->
 				<Variable Class="Parameter">
 					<Id>1774432714124</Id>
 					<Name><![CDATA[Kp_greenhouse]]></Name>
@@ -1276,7 +1249,6 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
-				<!-- HEAD: O2_conc_set -->
 				<Variable Class="Parameter">
 					<Id>1774436215755</Id>
 					<Name><![CDATA[O2_conc_set]]></Name>
@@ -1302,7 +1274,6 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
-				<!-- HEAD: Kp_O2 -->
 				<Variable Class="Parameter">
 					<Id>1774436215759</Id>
 					<Name><![CDATA[Kp_O2]]></Name>
@@ -1317,7 +1288,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.303]]></Code>
+							<Code><![CDATA[0.608]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1774436215757</Id>
@@ -1328,12 +1299,11 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
-				<!-- Savings: Price_H2 -->
 				<Variable Class="Parameter">
 					<Id>1774357848715</Id>
 					<Name><![CDATA[Price_H2]]></Name>
 					<Unit>euro/kg</Unit> 
-					<X>-260</X><Y>-720</Y>
+					<X>200</X><Y>720</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1354,12 +1324,11 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
-				<!-- Savings: Price_O2 -->
 				<Variable Class="Parameter">
 					<Id>1774357983454</Id>
 					<Name><![CDATA[Price_O2]]></Name>
 					<Unit>euro/kg</Unit> 
-					<X>-260</X><Y>-780</Y>
+					<X>200</X><Y>660</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1380,12 +1349,11 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
-				<!-- Savings: Price_Heat -->
 				<Variable Class="Parameter">
 					<Id>1774358208418</Id>
 					<Name><![CDATA[Price_Heat]]></Name>
 					<Unit>euro*MW/hr</Unit> 
-					<X>-260</X><Y>-840</Y>
+					<X>200</X><Y>600</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1411,10 +1379,10 @@
 				<Link SourceId="1774446845478" TargetId="1771221716611" Polarity="null">
 					<Height>28.294</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>480</X><Y>-400</Y></Direction>
+					<Direction><X>380</X><Y>-340</Y></Direction>
 					<Id>1770591204302</Id>
 					<Name><![CDATA[P_Electrolyzer - H2_prod]]></Name>
-					<X>240</X><Y>580</Y>
+					<X>340</X><Y>520</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1441,10 +1409,10 @@
 				<Link SourceId="1774446845478" TargetId="1770585768460" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>490</X><Y>600</Y></Direction>
+					<Direction><X>390</X><Y>660</Y></Direction>
 					<Id>1770591420790</Id>
 					<Name><![CDATA[P_Electrolyzer - Q_prod]]></Name>
-					<X>240</X><Y>580</Y>
+					<X>340</X><Y>520</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2176,10 +2144,10 @@
 				<Link SourceId="1771221716611" TargetId="1774358868817" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-540</X><Y>400</Y></Direction>
+					<Direction><X>-640</X><Y>620</Y></Direction>
 					<Id>1774359286209</Id>
 					<Name><![CDATA[H2_prod - Revenue_H2]]></Name>
-					<X>160</X><Y>-1040</Y>
+					<X>720</X><Y>180</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2194,7 +2162,7 @@
 					<Direction><X>-120</X><Y>80</Y></Direction>
 					<Id>1774359293616</Id>
 					<Name><![CDATA[Price_H2 - Revenue_H2]]></Name>
-					<X>-260</X><Y>-720</Y>
+					<X>200</X><Y>720</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2209,7 +2177,7 @@
 					<Direction><X>-120</X><Y>40</Y></Direction>
 					<Id>1774359626483</Id>
 					<Name><![CDATA[Price_O2 - Saving_O2]]></Name>
-					<X>-260</X><Y>-780</Y>
+					<X>200</X><Y>660</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2221,10 +2189,10 @@
 				<Link SourceId="1770581415133" TargetId="1774359474864" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-540</X><Y>40</Y></Direction>
+					<Direction><X>-640</X><Y>260</Y></Direction>
 					<Id>1774359633503</Id>
 					<Name><![CDATA[O2_prod - Saving_O2]]></Name>
-					<X>160</X><Y>-780</Y>
+					<X>720</X><Y>440</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2239,7 +2207,7 @@
 					<Direction><X>-120</X><Y>40</Y></Direction>
 					<Id>1774360036468</Id>
 					<Name><![CDATA[Price_Heat - Saving_Heat]]></Name>
-					<X>-260</X><Y>-840</Y>
+					<X>200</X><Y>600</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2251,10 +2219,10 @@
 				<Link SourceId="1770585768460" TargetId="1774359643936" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-550</X><Y>-380</Y></Direction>
+					<Direction><X>-650</X><Y>-540</Y></Direction>
 					<Id>1774360042073</Id>
 					<Name><![CDATA[Q_prod - Saving_Heat]]></Name>
-					<X>170</X><Y>-420</Y>
+					<X>730</X><Y>1180</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2269,7 +2237,7 @@
 					<Id>1774431924319</Id>
 					<Name><![CDATA[Wind_Profile]]></Name>
 					<Unit>J/time</Unit> 
-					<X>-260</X><Y>-920</Y>
+					<X>200</X><Y>520</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2313,37 +2281,37 @@
 					<Argument><![CDATA[79200.0]]></Argument>
 					<Argument><![CDATA[82800.0]]></Argument>
 					<Argument><![CDATA[86400.0]]></Argument>
-					<Value><![CDATA[1219.3815]]></Value>
-					<Value><![CDATA[1293.72]]></Value>
-					<Value><![CDATA[1476.8525]]></Value>
-					<Value><![CDATA[1841.4985]]></Value>
-					<Value><![CDATA[2537.798]]></Value>
-					<Value><![CDATA[3349.9055]]></Value>
-					<Value><![CDATA[3807.8815]]></Value>
-					<Value><![CDATA[4473.0585]]></Value>
-					<Value><![CDATA[5162.269]]></Value>
-					<Value><![CDATA[5406.8595]]></Value>
-					<Value><![CDATA[5362.9695]]></Value>
-					<Value><![CDATA[4864.1195]]></Value>
-					<Value><![CDATA[3947.4015]]></Value>
-					<Value><![CDATA[3318.0285]]></Value>
-					<Value><![CDATA[2816.1895]]></Value>
-					<Value><![CDATA[2656.278]]></Value>
-					<Value><![CDATA[2607.782]]></Value>
-					<Value><![CDATA[2912.282]]></Value>
-					<Value><![CDATA[3351.747]]></Value>
-					<Value><![CDATA[3559.714]]></Value>
-					<Value><![CDATA[4175.4605]]></Value>
-					<Value><![CDATA[4984.875]]></Value>
-					<Value><![CDATA[5654.014]]></Value>
-					<Value><![CDATA[6127.608]]></Value>
+					<Value><![CDATA[1219381.5]]></Value>
+					<Value><![CDATA[1293720.0]]></Value>
+					<Value><![CDATA[1476852.5]]></Value>
+					<Value><![CDATA[1219381.5]]></Value>
+					<Value><![CDATA[1219381.5]]></Value>
+					<Value><![CDATA[1219381.5]]></Value>
+					<Value><![CDATA[1219381.5]]></Value>
+					<Value><![CDATA[1219381.5]]></Value>
+					<Value><![CDATA[1219381.5]]></Value>
+					<Value><![CDATA[1219381.5]]></Value>
+					<Value><![CDATA[1219381.5]]></Value>
+					<Value><![CDATA[1219381.5]]></Value>
+					<Value><![CDATA[1219381.5]]></Value>
+					<Value><![CDATA[1219381.5]]></Value>
+					<Value><![CDATA[1219381.5]]></Value>
+					<Value><![CDATA[1219381.5]]></Value>
+					<Value><![CDATA[1219381.5]]></Value>
+					<Value><![CDATA[1219381.5]]></Value>
+					<Value><![CDATA[1219381.5]]></Value>
+					<Value><![CDATA[1219381.5]]></Value>
+					<Value><![CDATA[1219381.5]]></Value>
+					<Value><![CDATA[1219381.5]]></Value>
+					<Value><![CDATA[1219381.5]]></Value>
+					<Value><![CDATA[1219381.5]]></Value>
 				</TableFunction>
 			</TableFunctions>
 			<AgentLinks>
 				<AgentLink>
 					<Id>1769865394877</Id>
 					<Name><![CDATA[connections]]></Name>
-					<X>610</X><Y>1470</Y>
+					<X>1280</X><Y>-440</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2609,7 +2577,7 @@
     			<BarChart>
 					<Id>1774360064050</Id>
 					<Name><![CDATA[Cost_Revenue]]></Name>
-					<X>-360</X><Y>-320</Y>
+					<X>240</X><Y>1370</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2631,14 +2599,14 @@
 					</RecurrenceProperties>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Width>260</Width>
-					<Height>210</Height>
+					<Height>230</Height>
 					<BackgroundColor/>
 					<BorderColor/>
 					<ChartArea>
 						<XOffset>50</XOffset>
 						<YOffset>30</YOffset>
 						<Width>180</Width>
-						<Height>120</Height>
+						<Height>140</Height>
 						<BackgroundColor>-1</BackgroundColor>
 						<BorderColor>-16777216</BorderColor>
 						<GridColor>-12566464</GridColor>
@@ -2683,7 +2651,7 @@
     			<TimePlot>
 					<Id>1774431397891</Id>
 					<Name><![CDATA[plot]]></Name>
-					<X>1130</X><Y>-290</Y>
+					<X>520</X><Y>1350</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
