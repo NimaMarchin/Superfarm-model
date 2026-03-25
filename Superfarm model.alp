@@ -93,7 +93,7 @@
 			<ScaleRuler>
 				<Id>1769865394879</Id>
 				<Name><![CDATA[scale]]></Name>
-				<X>0</X><Y>-150</Y>
+				<X>600</X><Y>-400</Y>
 				<PublicFlag>false</PublicFlag>
 				<PresentationFlag>false</PresentationFlag>
 				<ShowLabel>false</ShowLabel>
@@ -112,7 +112,7 @@
 				<Variable Class="AuxVariable">
 					<Id>1773397897426</Id>
 					<Name><![CDATA[H2_prod_kg_hr]]></Name>
-					<X>200</X><Y>-1130</Y>
+					<X>760</X><Y>90</Y>
 					<Label><X>-20</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -127,7 +127,7 @@
 				<Variable Class="AuxVariable">
 					<Id>1773399001423</Id>
 					<Name><![CDATA[O2_prod_kg_hr]]></Name>
-					<X>210</X><Y>-850</Y>
+					<X>770</X><Y>370</Y>
 					<Label><X>-30</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -142,7 +142,7 @@
 				<Variable Class="AuxVariable">
 					<Id>1773399192072</Id>
 					<Name><![CDATA[H2_store_kg]]></Name>
-					<X>310</X><Y>-1130</Y>
+					<X>870</X><Y>90</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -157,7 +157,7 @@
 				<Variable Class="AuxVariable">
 					<Id>1773399424792</Id>
 					<Name><![CDATA[O2_store_kg]]></Name>
-					<X>310</X><Y>-850</Y>
+					<X>870</X><Y>370</Y>
 					<Label><X>-5</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -172,7 +172,7 @@
 				<Variable Class="AuxVariable">
 					<Id>1773399774950</Id>
 					<Name><![CDATA[O2_tank_in_kg_hr]]></Name>
-					<X>470</X><Y>-850</Y>
+					<X>1030</X><Y>370</Y>
 					<Label><X>-20</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -187,7 +187,7 @@
 				<Variable Class="AuxVariable">
 					<Id>1773400055254</Id>
 					<Name><![CDATA[O2_conc_tank_mg_m3]]></Name>
-					<X>650</X><Y>-850</Y>
+					<X>1210</X><Y>370</Y>
 					<Label><X>-20</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -202,7 +202,7 @@
 				<Variable Class="AuxVariable">
 					<Id>1773788847011</Id>
 					<Name><![CDATA[O2_consump_mg_per_kg_hr]]></Name>
-					<X>830</X><Y>-920</Y>
+					<X>1390</X><Y>300</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -218,7 +218,7 @@
 					<Id>1774122936723</Id>
 					<Name><![CDATA[dT_tank]]></Name>
 					<Unit>K</Unit> 
-					<X>1160</X><Y>-610</Y>
+					<X>1720</X><Y>910</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -234,7 +234,7 @@
 					<Id>1774127572981</Id>
 					<Name><![CDATA[V_tank]]></Name>
 					<Unit>m*m*m</Unit> 
-					<X>720</X><Y>-720</Y>
+					<X>1280</X><Y>800</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -250,7 +250,7 @@
 					<Id>1774128011033</Id>
 					<Name><![CDATA[O2_consum_fish]]></Name>
 					<Unit>mol/time</Unit> 
-					<X>830</X><Y>-800</Y>
+					<X>1390</X><Y>420</Y>
 					<Label><X>5</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -266,7 +266,7 @@
 					<Id>1774293142671</Id>
 					<Name><![CDATA[V_greenhouse]]></Name>
 					<Unit>m*m*m</Unit> 
-					<X>740</X><Y>-440</Y>
+					<X>1300</X><Y>1080</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -282,7 +282,7 @@
 					<Id>1774293511950</Id>
 					<Name><![CDATA[dT_greenhouse]]></Name>
 					<Unit>K</Unit> 
-					<X>1260</X><Y>-300</Y>
+					<X>1820</X><Y>1220</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -298,7 +298,7 @@
 					<Id>1774432301301</Id>
 					<Name><![CDATA[et_tank]]></Name>
 					<Unit>K</Unit> 
-					<X>320</X><Y>-560</Y>
+					<X>880</X><Y>960</Y>
 					<Label><X>20</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -314,7 +314,7 @@
 					<Id>1774432714126</Id>
 					<Name><![CDATA[et_greenhouse]]></Name>
 					<Unit>K</Unit> 
-					<X>480</X><Y>-260</Y>
+					<X>1040</X><Y>1260</Y>
 					<Label><X>20</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -326,11 +326,27 @@
 					</Properties>
 
 				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1774436215761</Id>
+					<Name><![CDATA[et_O2]]></Name>
+					<Unit>mol/(m*m*m)</Unit> 
+					<X>940</X><Y>540</Y>
+					<Label><X>20</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[1+5000*(O2_conc_set-O2_conc_tank)]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color>-4073239</Color>
+					</Properties>
+
+				</Variable>
 				<Variable Class="StockVariable">
 					<Id>1770580684116</Id>
 					<Name><![CDATA[O2_conc_tank]]></Name>
 					<Unit>mol/(m*m*m)</Unit> 
-					<X>600</X><Y>-780</Y>
+					<X>1160</X><Y>440</Y>
 					<Label><X>-90</X><Y>30</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -340,7 +356,7 @@
 					<Width>20</Width>
 					<Height>20</Height>
 						<Expression><![CDATA[(O2_tank_in-O2_consum_fish)/V_tank]]></Expression>
-						<InitialValue><![CDATA[0.1875]]></InitialValue>
+						<InitialValue><![CDATA[0.300]]></InitialValue>
 						<Color>-16776961</Color>
 					</Properties>
 				</Variable>
@@ -348,7 +364,7 @@
 					<Id>1770580753749</Id>
 					<Name><![CDATA[O2_store]]></Name>
 					<Unit>mol</Unit> 
-					<X>260</X><Y>-780</Y>
+					<X>820</X><Y>440</Y>
 					<Label><X>-30</X><Y>40</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -365,7 +381,7 @@
 					<Id>1770584954606</Id>
 					<Name><![CDATA[Q_store]]></Name>
 					<Unit>J</Unit> 
-					<X>260</X><Y>-340</Y>
+					<X>820</X><Y>1180</Y>
 					<Label><X>-30</X><Y>40</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -383,7 +399,7 @@
 					<Id>1770586694877</Id>
 					<Name><![CDATA[T_greenhouse]]></Name>
 					<Unit>K</Unit> 
-					<X>600</X><Y>-340</Y>
+					<X>1160</X><Y>1180</Y>
 					<Label><X>-45</X><Y>40</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -401,7 +417,7 @@
 					<Id>1771221680532</Id>
 					<Name><![CDATA[H2_store]]></Name>
 					<Unit>mol</Unit> 
-					<X>260</X><Y>-1040</Y>
+					<X>820</X><Y>180</Y>
 					<Label><X>-30</X><Y>40</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -418,7 +434,7 @@
 					<Id>1772102728989</Id>
 					<Name><![CDATA[T_tank]]></Name>
 					<Unit>K</Unit> 
-					<X>600</X><Y>-600</Y>
+					<X>1160</X><Y>920</Y>
 					<Label><X>-25</X><Y>30</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -436,7 +452,7 @@
 					<Id>1770581415133</Id>
 					<Name><![CDATA[O2_prod]]></Name>
 					<Unit>mol/time</Unit> 
-					<X>60</X><Y>-780</Y>
+					<X>580</X><Y>440</Y>
 					<Label><X>-80</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -447,8 +463,8 @@
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>100</X><Y>0</Y></Point>
-							<Point><X>200</X><Y>0</Y></Point>
+							<Point><X>140</X><Y>0</Y></Point>
+							<Point><X>240</X><Y>0</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
@@ -456,13 +472,13 @@
 					<Id>1770585081900</Id>
 					<Name><![CDATA[O2_tank_in]]></Name>
 					<Unit>mol/time</Unit> 
-					<X>260</X><Y>-780</Y>
+					<X>820</X><Y>440</Y>
 					<Label><X>0</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SourceId="1770580753749" TargetId="1770580684116" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[1.59]]></Formula>
+						<Formula><![CDATA[Kp_O2*et_O2]]></Formula>
 						<Color>-14774017</Color>
 						<ValveIndex>2</ValveIndex>
 						<Points>
@@ -477,7 +493,7 @@
 					<Id>1770585768460</Id>
 					<Name><![CDATA[Q_prod]]></Name>
 					<Unit>J/time</Unit> 
-					<X>60</X><Y>-340</Y>
+					<X>620</X><Y>1180</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -497,7 +513,7 @@
 					<Id>1770586640387</Id>
 					<Name><![CDATA[Q_greenhouse_in]]></Name>
 					<Unit>J/time</Unit> 
-					<X>260</X><Y>-340</Y>
+					<X>820</X><Y>1180</Y>
 					<Label><X>-60</X><Y>-30</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -518,7 +534,7 @@
 					<Id>1770588654461</Id>
 					<Name><![CDATA[Q_diss_greenhouse]]></Name>
 					<Unit>J/time</Unit> 
-					<X>600</X><Y>-340</Y>
+					<X>1160</X><Y>1180</Y>
 					<Label><X>-10</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -538,7 +554,7 @@
 					<Id>1771221716611</Id>
 					<Name><![CDATA[H2_prod]]></Name>
 					<Unit>mol/time</Unit> 
-					<X>60</X><Y>-1040</Y>
+					<X>620</X><Y>180</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -558,7 +574,7 @@
 					<Id>1772102787207</Id>
 					<Name><![CDATA[Q_tank_in]]></Name>
 					<Unit>J/time</Unit> 
-					<X>260</X><Y>-340</Y>
+					<X>820</X><Y>1180</Y>
 					<Label><X>10</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -578,7 +594,7 @@
 					<Id>1772103883558</Id>
 					<Name><![CDATA[Q_diss_tank]]></Name>
 					<Unit>J/time</Unit> 
-					<X>600</X><Y>-600</Y>
+					<X>1160</X><Y>920</Y>
 					<Label><X>-85</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -598,7 +614,7 @@
 					<Id>1770590285439</Id>
 					<Name><![CDATA[P_Electrolyzer]]></Name>
 					<Unit>J/time</Unit> 
-					<X>-120</X><Y>-920</Y>
+					<X>240</X><Y>580</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -623,7 +639,7 @@
 					<Id>1770590347808</Id>
 					<Name><![CDATA[Eff_Electrolyzer]]></Name>
 					<Unit></Unit> 
-					<X>-20</X><Y>-840</Y>
+					<X>340</X><Y>660</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -648,7 +664,7 @@
 					<Id>1770591136799</Id>
 					<Name><![CDATA[Delta_h]]></Name>
 					<Unit>J/mol</Unit> 
-					<X>-160</X><Y>-1060</Y>
+					<X>200</X><Y>440</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -673,7 +689,7 @@
 					<Id>1771184292123</Id>
 					<Name><![CDATA[cp_air]]></Name>
 					<Unit>J/(kg*K)</Unit> 
-					<X>760</X><Y>-410</Y>
+					<X>1320</X><Y>1110</Y>
 					<Label><X>15</X><Y>-5</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -699,7 +715,7 @@
 					<Name><![CDATA[rho_water]]></Name>
 					<Description><![CDATA[density of the water; water, not H2O because fish, nutrients etc. part of density value]]></Description>
 					<Unit>kg/(m*m*m)</Unit> 
-					<X>560</X><Y>-680</Y>
+					<X>1120</X><Y>840</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -725,7 +741,7 @@
 					<Name><![CDATA[cp_water]]></Name>
 					<Description><![CDATA[as with rho water: not H2O because cp includes fish, nutrients etc.]]></Description>
 					<Unit>J/(kg*K)</Unit> 
-					<X>440</X><Y>-660</Y>
+					<X>1000</X><Y>860</Y>
 					<Label><X>10</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -751,7 +767,7 @@
 					<Name><![CDATA[rho_air]]></Name>
 					<Description><![CDATA[density of the water; water, not H2O because fish, nutrients etc. part of density value]]></Description>
 					<Unit>kg/(m*m*m) </Unit> 
-					<X>700</X><Y>-480</Y>
+					<X>1260</X><Y>1040</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -776,7 +792,7 @@
 					<Id>1773171920949</Id>
 					<Name><![CDATA[fish_biomass]]></Name>
 					<Unit>kg</Unit> 
-					<X>940</X><Y>-780</Y>
+					<X>1500</X><Y>440</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -801,7 +817,7 @@
 					<Id>1773172313041</Id>
 					<Name><![CDATA[O2_consump_per_kg_s]]></Name>
 					<Unit>mol/(kg*time)</Unit> 
-					<X>830</X><Y>-870</Y>
+					<X>1390</X><Y>350</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -826,7 +842,7 @@
 					<Id>1774119410985</Id>
 					<Name><![CDATA[avg_U_value_tank]]></Name>
 					<Unit>J/(time*m*m*K)</Unit> 
-					<X>890</X><Y>-670</Y>
+					<X>1450</X><Y>850</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -851,7 +867,7 @@
 					<Id>1774120052773</Id>
 					<Name><![CDATA[l_tank]]></Name>
 					<Unit>m</Unit> 
-					<X>900</X><Y>-720</Y>
+					<X>1460</X><Y>800</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -876,7 +892,7 @@
 					<Id>1774120072479</Id>
 					<Name><![CDATA[h_tank]]></Name>
 					<Unit>m</Unit> 
-					<X>1030</X><Y>-720</Y>
+					<X>1590</X><Y>800</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -901,7 +917,7 @@
 					<Id>1774120083603</Id>
 					<Name><![CDATA[w_tank]]></Name>
 					<Unit>m</Unit> 
-					<X>1160</X><Y>-720</Y>
+					<X>1720</X><Y>800</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -926,7 +942,7 @@
 					<Id>1774122233896</Id>
 					<Name><![CDATA[A_tank]]></Name>
 					<Unit>m*m</Unit> 
-					<X>1060</X><Y>-670</Y>
+					<X>1620</X><Y>850</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -951,7 +967,7 @@
 					<Id>1774122701195</Id>
 					<Name><![CDATA[T_outdoor]]></Name>
 					<Unit>K</Unit> 
-					<X>1160</X><Y>-680</Y>
+					<X>1720</X><Y>840</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -976,7 +992,7 @@
 					<Id>1774292803329</Id>
 					<Name><![CDATA[l_greenhouse]]></Name>
 					<Unit>m</Unit> 
-					<X>920</X><Y>-440</Y>
+					<X>1480</X><Y>1080</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1001,7 +1017,7 @@
 					<Id>1774292803372</Id>
 					<Name><![CDATA[h_greenhouse]]></Name>
 					<Unit>m</Unit> 
-					<X>1060</X><Y>-440</Y>
+					<X>1620</X><Y>1080</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1026,7 +1042,7 @@
 					<Id>1774292803377</Id>
 					<Name><![CDATA[w_greenhouse]]></Name>
 					<Unit>m</Unit> 
-					<X>1180</X><Y>-440</Y>
+					<X>1740</X><Y>1080</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1051,7 +1067,7 @@
 					<Id>1774293330509</Id>
 					<Name><![CDATA[A_greenhouse]]></Name>
 					<Unit>m*m</Unit> 
-					<X>1060</X><Y>-380</Y>
+					<X>1620</X><Y>1140</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1076,7 +1092,7 @@
 					<Id>1774293511948</Id>
 					<Name><![CDATA[avg_U_value_greenhouse]]></Name>
 					<Unit>J/(time*m*m*K)</Unit> 
-					<X>1020</X><Y>-320</Y>
+					<X>1580</X><Y>1200</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1101,7 +1117,7 @@
 					<Id>1774430016406</Id>
 					<Name><![CDATA[T_set_tank]]></Name>
 					<Unit>K</Unit> 
-					<X>380</X><Y>-520</Y>
+					<X>940</X><Y>1000</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1126,7 +1142,7 @@
 					<Id>1774430049862</Id>
 					<Name><![CDATA[T_set_greenhouse]]></Name>
 					<Unit>K</Unit> 
-					<X>560</X><Y>-200</Y>
+					<X>1120</X><Y>1320</Y>
 					<Label><X>10</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1151,7 +1167,7 @@
 					<Id>1774432297905</Id>
 					<Name><![CDATA[Kp_tank]]></Name>
 					<Unit>J/(time*K)</Unit> 
-					<X>300</X><Y>-500</Y>
+					<X>860</X><Y>1020</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1176,7 +1192,7 @@
 					<Id>1774432714124</Id>
 					<Name><![CDATA[Kp_greenhouse]]></Name>
 					<Unit>J/(time*K)</Unit> 
-					<X>380</X><Y>-200</Y>
+					<X>940</X><Y>1320</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1197,15 +1213,65 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
+				<Variable Class="Parameter">
+					<Id>1774436215755</Id>
+					<Name><![CDATA[O2_conc_set]]></Name>
+					<Unit>mol/(m*m*m)</Unit> 
+					<X>1020</X><Y>600</Y>
+					<Label><X>10</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[0.303]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1774436215753</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1774436215759</Id>
+					<Name><![CDATA[Kp_O2]]></Name>
+					<Unit>(m*m*m)/(time)</Unit> 
+					<X>840</X><Y>600</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[0.303]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1774436215757</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
 			</Variables>
 			<Dependences>
 				<Link SourceId="1770590285439" TargetId="1771221716611" Polarity="null">
 					<Height>28.294</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>280</X><Y>-120</Y></Direction>
+					<Direction><X>480</X><Y>-400</Y></Direction>
 					<Id>1770591204302</Id>
 					<Name><![CDATA[P_Electrolyzer - H2_prod]]></Name>
-					<X>-120</X><Y>-920</Y>
+					<X>240</X><Y>580</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1220,7 +1286,7 @@
 					<Direction><X>0</X><Y>260</Y></Direction>
 					<Id>1770591350202</Id>
 					<Name><![CDATA[H2_prod - O2_prod]]></Name>
-					<X>160</X><Y>-1040</Y>
+					<X>720</X><Y>180</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1232,10 +1298,10 @@
 				<Link SourceId="1770590285439" TargetId="1770585768460" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>290</X><Y>580</Y></Direction>
+					<Direction><X>490</X><Y>600</Y></Direction>
 					<Id>1770591420790</Id>
 					<Name><![CDATA[P_Electrolyzer - Q_prod]]></Name>
-					<X>-120</X><Y>-920</Y>
+					<X>240</X><Y>580</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1247,10 +1313,10 @@
 				<Link SourceId="1770590347808" TargetId="1770585768460" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>190</X><Y>500</Y></Direction>
+					<Direction><X>390</X><Y>520</Y></Direction>
 					<Id>1770591447702</Id>
 					<Name><![CDATA[Eff_Electrolyzer - Q_prod]]></Name>
-					<X>-20</X><Y>-840</Y>
+					<X>340</X><Y>660</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1262,10 +1328,10 @@
 				<Link SourceId="1770591136799" TargetId="1771221716611" Polarity="null">
 					<Height>37.629</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>320</X><Y>20</Y></Direction>
+					<Direction><X>520</X><Y>-260</Y></Direction>
 					<Id>1770591578781</Id>
 					<Name><![CDATA[Delta_h - H2_prod]]></Name>
-					<X>-160</X><Y>-1060</Y>
+					<X>200</X><Y>440</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1277,10 +1343,10 @@
 				<Link SourceId="1770590347808" TargetId="1771221716611" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>180</X><Y>-200</Y></Direction>
+					<Direction><X>380</X><Y>-480</Y></Direction>
 					<Id>1770591601949</Id>
 					<Name><![CDATA[Eff_Electrolyzer - H2_prod]]></Name>
-					<X>-20</X><Y>-840</Y>
+					<X>340</X><Y>660</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1295,7 +1361,7 @@
 					<Direction><X>-160</X><Y>70</Y></Direction>
 					<Id>1771184338558</Id>
 					<Name><![CDATA[cp_air - T_greenhouse]]></Name>
-					<X>760</X><Y>-410</Y>
+					<X>1320</X><Y>1110</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1310,7 +1376,7 @@
 					<Direction><X>-140</X><Y>100</Y></Direction>
 					<Id>1771184349827</Id>
 					<Name><![CDATA[V_greenhouse - T_greenhouse]]></Name>
-					<X>740</X><Y>-440</Y>
+					<X>1300</X><Y>1080</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1325,7 +1391,7 @@
 					<Direction><X>40</X><Y>80</Y></Direction>
 					<Id>1772103283384</Id>
 					<Name><![CDATA[rho_water - T_tank]]></Name>
-					<X>560</X><Y>-680</Y>
+					<X>1120</X><Y>840</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1340,7 +1406,7 @@
 					<Direction><X>160</X><Y>60</Y></Direction>
 					<Id>1772103323400</Id>
 					<Name><![CDATA[cp_water - T_tank]]></Name>
-					<X>440</X><Y>-660</Y>
+					<X>1000</X><Y>860</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1355,7 +1421,7 @@
 					<Direction><X>-100</X><Y>140</Y></Direction>
 					<Id>1772132050240</Id>
 					<Name><![CDATA[rho_air - T_greenhouse]]></Name>
-					<X>700</X><Y>-480</Y>
+					<X>1260</X><Y>1040</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1370,7 +1436,7 @@
 					<Direction><X>40</X><Y>-90</Y></Direction>
 					<Id>1773398817488</Id>
 					<Name><![CDATA[H2_prod - H2_prod_kg_hr]]></Name>
-					<X>160</X><Y>-1040</Y>
+					<X>720</X><Y>180</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1385,7 +1451,7 @@
 					<Direction><X>50</X><Y>-70</Y></Direction>
 					<Id>1773399066544</Id>
 					<Name><![CDATA[O2_prod - O2_prod_kg_hr]]></Name>
-					<X>160</X><Y>-780</Y>
+					<X>720</X><Y>740</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1400,7 +1466,7 @@
 					<Direction><X>50</X><Y>-90</Y></Direction>
 					<Id>1773399278007</Id>
 					<Name><![CDATA[H2_store - H2_store_kg]]></Name>
-					<X>260</X><Y>-1040</Y>
+					<X>820</X><Y>180</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1415,7 +1481,7 @@
 					<Direction><X>50</X><Y>-70</Y></Direction>
 					<Id>1773399499499</Id>
 					<Name><![CDATA[O2_store - O2_store_kg]]></Name>
-					<X>260</X><Y>-780</Y>
+					<X>820</X><Y>440</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1430,7 +1496,7 @@
 					<Direction><X>50</X><Y>-70</Y></Direction>
 					<Id>1773399827039</Id>
 					<Name><![CDATA[O2_tank_in - O2_tank_in_kg_hr]]></Name>
-					<X>420</X><Y>-780</Y>
+					<X>980</X><Y>440</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1445,7 +1511,7 @@
 					<Direction><X>50</X><Y>-70</Y></Direction>
 					<Id>1773400129238</Id>
 					<Name><![CDATA[O2_conc_tank - O2_conc_tank_mg_m3]]></Name>
-					<X>600</X><Y>-780</Y>
+					<X>1160</X><Y>440</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1460,7 +1526,7 @@
 					<Direction><X>0</X><Y>-50</Y></Direction>
 					<Id>1773789020674</Id>
 					<Name><![CDATA[O2_consump_per_kg_s - O2_consump_mg_per_kg_hr]]></Name>
-					<X>830</X><Y>-870</Y>
+					<X>1390</X><Y>350</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1475,7 +1541,7 @@
 					<Direction><X>0</X><Y>70</Y></Direction>
 					<Id>1774122979401</Id>
 					<Name><![CDATA[T_outdoor - dT_tank]]></Name>
-					<X>1160</X><Y>-680</Y>
+					<X>1720</X><Y>840</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1490,7 +1556,7 @@
 					<Direction><X>560</X><Y>-10</Y></Direction>
 					<Id>1774122986902</Id>
 					<Name><![CDATA[T_tank - dT_tank]]></Name>
-					<X>600</X><Y>-600</Y>
+					<X>1160</X><Y>920</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1505,7 +1571,7 @@
 					<Direction><X>-400</X><Y>10</Y></Direction>
 					<Id>1774123007878</Id>
 					<Name><![CDATA[dT_tank - Q_diss_tank]]></Name>
-					<X>1160</X><Y>-610</Y>
+					<X>1720</X><Y>910</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1520,7 +1586,7 @@
 					<Direction><X>-130</X><Y>70</Y></Direction>
 					<Id>1774123078029</Id>
 					<Name><![CDATA[avg_U_value_tank - Q_diss_tank]]></Name>
-					<X>890</X><Y>-670</Y>
+					<X>1450</X><Y>850</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1535,7 +1601,7 @@
 					<Direction><X>-300</X><Y>70</Y></Direction>
 					<Id>1774123095047</Id>
 					<Name><![CDATA[A_tank - Q_diss_tank]]></Name>
-					<X>1060</X><Y>-670</Y>
+					<X>1620</X><Y>850</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1550,7 +1616,7 @@
 					<Direction><X>-180</X><Y>0</Y></Direction>
 					<Id>1774127599539</Id>
 					<Name><![CDATA[l_tank - V_tank]]></Name>
-					<X>900</X><Y>-720</Y>
+					<X>1460</X><Y>800</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1565,7 +1631,7 @@
 					<Direction><X>-310</X><Y>0</Y></Direction>
 					<Id>1774127609620</Id>
 					<Name><![CDATA[h_tank - V_tank]]></Name>
-					<X>1030</X><Y>-720</Y>
+					<X>1590</X><Y>800</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1580,7 +1646,7 @@
 					<Direction><X>-440</X><Y>0</Y></Direction>
 					<Id>1774127623972</Id>
 					<Name><![CDATA[w_tank - V_tank]]></Name>
-					<X>1160</X><Y>-720</Y>
+					<X>1720</X><Y>800</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1595,7 +1661,7 @@
 					<Direction><X>-120</X><Y>120</Y></Direction>
 					<Id>1774127867596</Id>
 					<Name><![CDATA[V_tank - T_tank]]></Name>
-					<X>720</X><Y>-720</Y>
+					<X>1280</X><Y>800</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1607,10 +1673,10 @@
 				<Link SourceId="1774127572981" TargetId="1770580684116" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-120</X><Y>-60</Y></Direction>
+					<Direction><X>-120</X><Y>-360</Y></Direction>
 					<Id>1774127873784</Id>
 					<Name><![CDATA[V_tank - O2_conc_tank]]></Name>
-					<X>720</X><Y>-720</Y>
+					<X>1280</X><Y>800</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1625,7 +1691,7 @@
 					<Direction><X>0</X><Y>70</Y></Direction>
 					<Id>1774128036820</Id>
 					<Name><![CDATA[O2_consump_per_kg_s - O2_consum_fish]]></Name>
-					<X>830</X><Y>-870</Y>
+					<X>1390</X><Y>350</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1640,7 +1706,7 @@
 					<Direction><X>-110</X><Y>-20</Y></Direction>
 					<Id>1774128042483</Id>
 					<Name><![CDATA[fish_biomass - O2_consum_fish]]></Name>
-					<X>940</X><Y>-780</Y>
+					<X>1500</X><Y>440</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1655,7 +1721,7 @@
 					<Direction><X>-230</X><Y>20</Y></Direction>
 					<Id>1774128068375</Id>
 					<Name><![CDATA[O2_consum_fish - O2_conc_tank]]></Name>
-					<X>830</X><Y>-800</Y>
+					<X>1390</X><Y>420</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1670,7 +1736,7 @@
 					<Direction><X>-180</X><Y>0</Y></Direction>
 					<Id>1774293105616</Id>
 					<Name><![CDATA[l_greenhouse - V_greenhouse]]></Name>
-					<X>920</X><Y>-440</Y>
+					<X>1480</X><Y>1080</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1685,7 +1751,7 @@
 					<Direction><X>-440</X><Y>0</Y></Direction>
 					<Id>1774293207975</Id>
 					<Name><![CDATA[w_greenhouse - V_greenhouse]]></Name>
-					<X>1180</X><Y>-440</Y>
+					<X>1740</X><Y>1080</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1700,7 +1766,7 @@
 					<Direction><X>-320</X><Y>0</Y></Direction>
 					<Id>1774293241722</Id>
 					<Name><![CDATA[h_greenhouse - V_greenhouse]]></Name>
-					<X>1060</X><Y>-440</Y>
+					<X>1620</X><Y>1080</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1715,7 +1781,7 @@
 					<Direction><X>-280</X><Y>40</Y></Direction>
 					<Id>1774293485664</Id>
 					<Name><![CDATA[A_greenhouse - Q_diss_greenhouse]]></Name>
-					<X>1060</X><Y>-380</Y>
+					<X>1620</X><Y>1140</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1730,7 +1796,7 @@
 					<Direction><X>100</X><Y>380</Y></Direction>
 					<Id>1774293539031</Id>
 					<Name><![CDATA[T_outdoor - dT_greenhouse]]></Name>
-					<X>1160</X><Y>-680</Y>
+					<X>1720</X><Y>840</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1745,7 +1811,7 @@
 					<Direction><X>-240</X><Y>-20</Y></Direction>
 					<Id>1774293587585</Id>
 					<Name><![CDATA[avg_U_value_greenhouse - Q_diss_greenhouse]]></Name>
-					<X>1020</X><Y>-320</Y>
+					<X>1580</X><Y>1200</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1760,7 +1826,7 @@
 					<Direction><X>660</X><Y>40</Y></Direction>
 					<Id>1774293614375</Id>
 					<Name><![CDATA[T_greenhouse - dT_greenhouse]]></Name>
-					<X>600</X><Y>-340</Y>
+					<X>1160</X><Y>1180</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1775,7 +1841,7 @@
 					<Direction><X>-480</X><Y>-40</Y></Direction>
 					<Id>1774293875456</Id>
 					<Name><![CDATA[dT_greenhouse - Q_diss_greenhouse]]></Name>
-					<X>1260</X><Y>-300</Y>
+					<X>1820</X><Y>1220</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1790,7 +1856,7 @@
 					<Direction><X>-280</X><Y>40</Y></Direction>
 					<Id>1774430281331</Id>
 					<Name><![CDATA[T_tank - et_tank]]></Name>
-					<X>600</X><Y>-600</Y>
+					<X>1160</X><Y>920</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1805,7 +1871,7 @@
 					<Direction><X>-120</X><Y>80</Y></Direction>
 					<Id>1774430291771</Id>
 					<Name><![CDATA[T_greenhouse - et_greenhouse]]></Name>
-					<X>600</X><Y>-340</Y>
+					<X>1160</X><Y>1180</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1820,7 +1886,7 @@
 					<Direction><X>-60</X><Y>-40</Y></Direction>
 					<Id>1774432401438</Id>
 					<Name><![CDATA[T_set_tank - et_tank]]></Name>
-					<X>380</X><Y>-520</Y>
+					<X>940</X><Y>1000</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1835,7 +1901,7 @@
 					<Direction><X>-60</X><Y>-40</Y></Direction>
 					<Id>1774432407546</Id>
 					<Name><![CDATA[et_tank - Q_tank_in]]></Name>
-					<X>320</X><Y>-560</Y>
+					<X>880</X><Y>960</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1850,7 +1916,7 @@
 					<Direction><X>-40</X><Y>-100</Y></Direction>
 					<Id>1774432422524</Id>
 					<Name><![CDATA[Kp_tank - Q_tank_in]]></Name>
-					<X>300</X><Y>-500</Y>
+					<X>860</X><Y>1020</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1865,7 +1931,7 @@
 					<Direction><X>-80</X><Y>-60</Y></Direction>
 					<Id>1774432714108</Id>
 					<Name><![CDATA[T_set_greenhouse - et_greenhouse]]></Name>
-					<X>560</X><Y>-200</Y>
+					<X>1120</X><Y>1320</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1880,7 +1946,7 @@
 					<Direction><X>40</X><Y>-140</Y></Direction>
 					<Id>1774432816228</Id>
 					<Name><![CDATA[Kp_greenhouse - Q_greenhouse_in]]></Name>
-					<X>380</X><Y>-200</Y>
+					<X>940</X><Y>1320</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1895,7 +1961,67 @@
 					<Direction><X>-60</X><Y>-80</Y></Direction>
 					<Id>1774432851105</Id>
 					<Name><![CDATA[et_greenhouse - Q_greenhouse_in]]></Name>
-					<X>480</X><Y>-260</Y>
+					<X>1040</X><Y>1260</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-11832691</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1774436215755" TargetId="1774436215761" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-80</X><Y>-60</Y></Direction>
+					<Id>1774436215750</Id>
+					<Name><![CDATA[O2_conc_set - et_O2]]></Name>
+					<X>1020</X><Y>600</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-11832691</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1770580684116" TargetId="1774436215761" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-220</X><Y>100</Y></Direction>
+					<Id>1774436953331</Id>
+					<Name><![CDATA[O2_conc_tank - et_O2]]></Name>
+					<X>1160</X><Y>440</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-11832691</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1774436215759" TargetId="1770585081900" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>140</X><Y>-160</Y></Direction>
+					<Id>1774436989711</Id>
+					<Name><![CDATA[Kp_O2 - O2_tank_in]]></Name>
+					<X>840</X><Y>600</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-11832691</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1774436215761" TargetId="1770585081900" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>40</X><Y>-100</Y></Direction>
+					<Id>1774436998489</Id>
+					<Name><![CDATA[et_O2 - O2_tank_in]]></Name>
+					<X>940</X><Y>540</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1909,7 +2035,7 @@
 				<AgentLink>
 					<Id>1769865394877</Id>
 					<Name><![CDATA[connections]]></Name>
-					<X>50</X><Y>-50</Y>
+					<X>610</X><Y>1470</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1945,7 +2071,7 @@
     			<TimePlot>
 					<Id>1773401137226</Id>
 					<Name><![CDATA[Hydrogen_and_Oxygen_Production_Rate]]></Name>
-					<X>220</X><Y>-180</Y>
+					<X>780</X><Y>1340</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2025,7 +2151,7 @@
     			<TimePlot>
 					<Id>1773403228662</Id>
 					<Name><![CDATA[Hydrogen_and_Oxygen_Storage]]></Name>
-					<X>540</X><Y>-180</Y>
+					<X>1100</X><Y>1340</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2105,7 +2231,7 @@
     			<TimePlot>
 					<Id>1773403318110</Id>
 					<Name><![CDATA[Oxygen_Concentration_in_Tank]]></Name>
-					<X>840</X><Y>-180</Y>
+					<X>1400</X><Y>1340</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2189,8 +2315,8 @@
 	<InspectionWindowColorTheme>DEFAULT</InspectionWindowColorTheme>
 	<Frame>
 		<Id>1769865394863</Id>
-		<Width>1000</Width>
-		<Height>600</Height>
+		<Width>2240</Width>
+		<Height>1720</Height>
 	</Frame>
 	<Database>
 		<Id>1769865394862</Id>
@@ -2337,6 +2463,12 @@
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[Kp_greenhouse]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[O2_conc_set]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[Kp_O2]]></ParameterName>
 				</Parameter>
 			</Parameters>
 			<PresentationProperties>
