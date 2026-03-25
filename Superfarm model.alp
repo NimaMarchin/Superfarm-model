@@ -17,7 +17,7 @@
 		<!--   =========   Active Object Class   ========  -->
 		<ActiveObjectClass>
 			<Id>1769865394865</Id>
-			<Name><![CDATA[Main]]></Name>
+			<Name><![CDATA[Oxygen_Balance_Plot]]></Name>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1769865394881</Id>
@@ -214,6 +214,7 @@
 					</Properties>
 
 				</Variable>
+				<!-- HEAD: dT_tank -->
 				<Variable Class="AuxVariable">
 					<Id>1774122936723</Id>
 					<Name><![CDATA[dT_tank]]></Name>
@@ -230,6 +231,7 @@
 					</Properties>
 
 				</Variable>
+				<!-- HEAD: V_tank -->
 				<Variable Class="AuxVariable">
 					<Id>1774127572981</Id>
 					<Name><![CDATA[V_tank]]></Name>
@@ -246,6 +248,7 @@
 					</Properties>
 
 				</Variable>
+				<!-- HEAD: O2_consum_fish -->
 				<Variable Class="AuxVariable">
 					<Id>1774128011033</Id>
 					<Name><![CDATA[O2_consum_fish]]></Name>
@@ -262,6 +265,7 @@
 					</Properties>
 
 				</Variable>
+				<!-- HEAD: V_greenhouse -->
 				<Variable Class="AuxVariable">
 					<Id>1774293142671</Id>
 					<Name><![CDATA[V_greenhouse]]></Name>
@@ -278,6 +282,7 @@
 					</Properties>
 
 				</Variable>
+				<!-- HEAD: dT_greenhouse -->
 				<Variable Class="AuxVariable">
 					<Id>1774293511950</Id>
 					<Name><![CDATA[dT_greenhouse]]></Name>
@@ -294,6 +299,7 @@
 					</Properties>
 
 				</Variable>
+				<!-- HEAD: et_tank -->
 				<Variable Class="AuxVariable">
 					<Id>1774432301301</Id>
 					<Name><![CDATA[et_tank]]></Name>
@@ -310,6 +316,7 @@
 					</Properties>
 
 				</Variable>
+				<!-- HEAD: et_greenhouse -->
 				<Variable Class="AuxVariable">
 					<Id>1774432714126</Id>
 					<Name><![CDATA[et_greenhouse]]></Name>
@@ -326,6 +333,7 @@
 					</Properties>
 
 				</Variable>
+				<!-- HEAD: et_O2 -->
 				<Variable Class="AuxVariable">
 					<Id>1774436215761</Id>
 					<Name><![CDATA[et_O2]]></Name>
@@ -339,6 +347,71 @@
 						<Formula><![CDATA[1+5000*(O2_conc_set-O2_conc_tank)]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color>-4073239</Color>
+					</Properties>
+
+				</Variable>
+				<!-- Savings: Revenue_H2 -->
+				<Variable Class="AuxVariable">
+					<Id>1774358868817</Id>
+					<Name><![CDATA[Revenue_H2]]></Name>
+					<X>-380</X><Y>-640</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[H2_prod*0.002016*3600*Price_H2]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color>-4073239</Color>
+					</Properties>
+
+				</Variable>
+				<!-- Savings: Saving_O2 -->
+				<Variable Class="AuxVariable">
+					<Id>1774359474864</Id>
+					<Name><![CDATA[Saving_O2]]></Name>
+					<X>-380</X><Y>-740</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[O2_prod*0.032*3600*Price_O2]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color>-4073239</Color>
+					</Properties>
+
+				</Variable>
+				<!-- Savings: Saving_Heat -->
+				<Variable Class="AuxVariable">
+					<Id>1774359643936</Id>
+					<Name><![CDATA[Saving_Heat]]></Name>
+					<X>-380</X><Y>-800</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[Q_prod*0.000000277*Price_Heat]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color>-4073239</Color>
+					</Properties>
+
+				</Variable>
+				<!-- Savings: P_Electrolyzer as AuxVariable (Wind_Profile driven) -->
+				<Variable Class="AuxVariable">
+					<Id>1774446845478</Id>
+					<Name><![CDATA[P_Electrolyzer]]></Name>
+					<Unit>J/time</Unit> 
+					<X>-120</X><Y>-920</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[Wind_Profile(time())*1.16739*2.9]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color>-256</Color>
 					</Properties>
 
 				</Variable>
@@ -611,31 +684,6 @@
 					</Properties>
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1770590285439</Id>
-					<Name><![CDATA[P_Electrolyzer]]></Name>
-					<Unit>J/time</Unit> 
-					<X>240</X><Y>580</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[double]]></Type>
-						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
-						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[1305000]]></Code>
-						</DefaultValue>
-						<ParameterEditor>
-							<Id>1770590285437</Id>
-							<EditorContolType>TEXT_BOX</EditorContolType>
-							<MinSliderValue><![CDATA[0]]></MinSliderValue>
-							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
-							<DelimeterType>SEPARATOR</DelimeterType>
-						</ParameterEditor>
-					</Properties>                 
-				</Variable>
-				<Variable Class="Parameter">
 					<Id>1770590347808</Id>
 					<Name><![CDATA[Eff_Electrolyzer]]></Name>
 					<Unit></Unit> 
@@ -838,6 +886,7 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
+				<!-- HEAD: avg_U_value_tank -->
 				<Variable Class="Parameter">
 					<Id>1774119410985</Id>
 					<Name><![CDATA[avg_U_value_tank]]></Name>
@@ -863,6 +912,7 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
+				<!-- HEAD: l_tank -->
 				<Variable Class="Parameter">
 					<Id>1774120052773</Id>
 					<Name><![CDATA[l_tank]]></Name>
@@ -888,6 +938,7 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
+				<!-- HEAD: h_tank -->
 				<Variable Class="Parameter">
 					<Id>1774120072479</Id>
 					<Name><![CDATA[h_tank]]></Name>
@@ -913,6 +964,7 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
+				<!-- HEAD: w_tank -->
 				<Variable Class="Parameter">
 					<Id>1774120083603</Id>
 					<Name><![CDATA[w_tank]]></Name>
@@ -938,6 +990,7 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
+				<!-- HEAD: A_tank -->
 				<Variable Class="Parameter">
 					<Id>1774122233896</Id>
 					<Name><![CDATA[A_tank]]></Name>
@@ -963,6 +1016,7 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
+				<!-- HEAD: T_outdoor -->
 				<Variable Class="Parameter">
 					<Id>1774122701195</Id>
 					<Name><![CDATA[T_outdoor]]></Name>
@@ -988,6 +1042,7 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
+				<!-- HEAD: l_greenhouse -->
 				<Variable Class="Parameter">
 					<Id>1774292803329</Id>
 					<Name><![CDATA[l_greenhouse]]></Name>
@@ -1013,6 +1068,7 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
+				<!-- HEAD: h_greenhouse -->
 				<Variable Class="Parameter">
 					<Id>1774292803372</Id>
 					<Name><![CDATA[h_greenhouse]]></Name>
@@ -1038,6 +1094,7 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
+				<!-- HEAD: w_greenhouse -->
 				<Variable Class="Parameter">
 					<Id>1774292803377</Id>
 					<Name><![CDATA[w_greenhouse]]></Name>
@@ -1063,6 +1120,7 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
+				<!-- HEAD: A_greenhouse -->
 				<Variable Class="Parameter">
 					<Id>1774293330509</Id>
 					<Name><![CDATA[A_greenhouse]]></Name>
@@ -1088,6 +1146,7 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
+				<!-- HEAD: avg_U_value_greenhouse -->
 				<Variable Class="Parameter">
 					<Id>1774293511948</Id>
 					<Name><![CDATA[avg_U_value_greenhouse]]></Name>
@@ -1113,6 +1172,7 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
+				<!-- HEAD: T_set_tank -->
 				<Variable Class="Parameter">
 					<Id>1774430016406</Id>
 					<Name><![CDATA[T_set_tank]]></Name>
@@ -1138,6 +1198,7 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
+				<!-- HEAD: T_set_greenhouse -->
 				<Variable Class="Parameter">
 					<Id>1774430049862</Id>
 					<Name><![CDATA[T_set_greenhouse]]></Name>
@@ -1163,6 +1224,7 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
+				<!-- HEAD: Kp_tank -->
 				<Variable Class="Parameter">
 					<Id>1774432297905</Id>
 					<Name><![CDATA[Kp_tank]]></Name>
@@ -1188,6 +1250,7 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
+				<!-- HEAD: Kp_greenhouse -->
 				<Variable Class="Parameter">
 					<Id>1774432714124</Id>
 					<Name><![CDATA[Kp_greenhouse]]></Name>
@@ -1213,6 +1276,7 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
+				<!-- HEAD: O2_conc_set -->
 				<Variable Class="Parameter">
 					<Id>1774436215755</Id>
 					<Name><![CDATA[O2_conc_set]]></Name>
@@ -1238,6 +1302,7 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
+				<!-- HEAD: Kp_O2 -->
 				<Variable Class="Parameter">
 					<Id>1774436215759</Id>
 					<Name><![CDATA[Kp_O2]]></Name>
@@ -1263,9 +1328,87 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
+				<!-- Savings: Price_H2 -->
+				<Variable Class="Parameter">
+					<Id>1774357848715</Id>
+					<Name><![CDATA[Price_H2]]></Name>
+					<Unit>euro/kg</Unit> 
+					<X>-260</X><Y>-720</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[5]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1774357848708</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<!-- Savings: Price_O2 -->
+				<Variable Class="Parameter">
+					<Id>1774357983454</Id>
+					<Name><![CDATA[Price_O2]]></Name>
+					<Unit>euro/kg</Unit> 
+					<X>-260</X><Y>-780</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[0.2]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1774357983452</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<!-- Savings: Price_Heat -->
+				<Variable Class="Parameter">
+					<Id>1774358208418</Id>
+					<Name><![CDATA[Price_Heat]]></Name>
+					<Unit>euro*MW/hr</Unit> 
+					<X>-260</X><Y>-840</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[74]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1774358208416</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
 			</Variables>
 			<Dependences>
-				<Link SourceId="1770590285439" TargetId="1771221716611" Polarity="null">
+				<Link SourceId="1774446845478" TargetId="1771221716611" Polarity="null">
 					<Height>28.294</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>480</X><Y>-400</Y></Direction>
@@ -1295,7 +1438,7 @@
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1770590285439" TargetId="1770585768460" Polarity="null">
+				<Link SourceId="1774446845478" TargetId="1770585768460" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>490</X><Y>600</Y></Direction>
@@ -2030,7 +2173,172 @@
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
+				<Link SourceId="1771221716611" TargetId="1774358868817" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-540</X><Y>400</Y></Direction>
+					<Id>1774359286209</Id>
+					<Name><![CDATA[H2_prod - Revenue_H2]]></Name>
+					<X>160</X><Y>-1040</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-11832691</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1774357848715" TargetId="1774358868817" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-120</X><Y>80</Y></Direction>
+					<Id>1774359293616</Id>
+					<Name><![CDATA[Price_H2 - Revenue_H2]]></Name>
+					<X>-260</X><Y>-720</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-11832691</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1774357983454" TargetId="1774359474864" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-120</X><Y>40</Y></Direction>
+					<Id>1774359626483</Id>
+					<Name><![CDATA[Price_O2 - Saving_O2]]></Name>
+					<X>-260</X><Y>-780</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-11832691</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1770581415133" TargetId="1774359474864" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-540</X><Y>40</Y></Direction>
+					<Id>1774359633503</Id>
+					<Name><![CDATA[O2_prod - Saving_O2]]></Name>
+					<X>160</X><Y>-780</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-11832691</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1774358208418" TargetId="1774359643936" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-120</X><Y>40</Y></Direction>
+					<Id>1774360036468</Id>
+					<Name><![CDATA[Price_Heat - Saving_Heat]]></Name>
+					<X>-260</X><Y>-840</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-11832691</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1770585768460" TargetId="1774359643936" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-550</X><Y>-380</Y></Direction>
+					<Id>1774360042073</Id>
+					<Name><![CDATA[Q_prod - Saving_Heat]]></Name>
+					<X>170</X><Y>-420</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-11832691</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
 			</Dependences>
+			<TableFunctions>
+				<TableFunction AccessType="public" StaticFunction="false">
+					<Id>1774431924319</Id>
+					<Name><![CDATA[Wind_Profile]]></Name>
+					<Unit>J/time</Unit> 
+					<X>-260</X><Y>-920</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<InterpolationMethod>LINEAR</InterpolationMethod>
+					<OutOfRangeBehaviour>REPEATING</OutOfRangeBehaviour>
+					<OutOfRangeCustomValue><![CDATA[0.0]]></OutOfRangeCustomValue>
+					<ApproximationOrder><![CDATA[1]]></ApproximationOrder>
+					<LoadFromDatabase><![CDATA[false]]></LoadFromDatabase>
+					<ValuesQuery>
+						<Id>1774431924317</Id>
+						<TableReference>
+						</TableReference>
+							<ArgumentColumnReference>
+							</ArgumentColumnReference>
+							<ValueColumnReference>
+							</ValueColumnReference>
+					</ValuesQuery>
+// arguments and values
+					<Argument><![CDATA[3600.0]]></Argument>
+					<Argument><![CDATA[7200.0]]></Argument>
+					<Argument><![CDATA[10800.0]]></Argument>
+					<Argument><![CDATA[14400.0]]></Argument>
+					<Argument><![CDATA[18000.0]]></Argument>
+					<Argument><![CDATA[21600.0]]></Argument>
+					<Argument><![CDATA[25200.0]]></Argument>
+					<Argument><![CDATA[28800.0]]></Argument>
+					<Argument><![CDATA[32400.0]]></Argument>
+					<Argument><![CDATA[36000.0]]></Argument>
+					<Argument><![CDATA[39600.0]]></Argument>
+					<Argument><![CDATA[43200.0]]></Argument>
+					<Argument><![CDATA[46800.0]]></Argument>
+					<Argument><![CDATA[50400.0]]></Argument>
+					<Argument><![CDATA[54000.0]]></Argument>
+					<Argument><![CDATA[57600.0]]></Argument>
+					<Argument><![CDATA[61200.0]]></Argument>
+					<Argument><![CDATA[64800.0]]></Argument>
+					<Argument><![CDATA[68400.0]]></Argument>
+					<Argument><![CDATA[72000.0]]></Argument>
+					<Argument><![CDATA[75600.0]]></Argument>
+					<Argument><![CDATA[79200.0]]></Argument>
+					<Argument><![CDATA[82800.0]]></Argument>
+					<Argument><![CDATA[86400.0]]></Argument>
+					<Value><![CDATA[1219.3815]]></Value>
+					<Value><![CDATA[1293.72]]></Value>
+					<Value><![CDATA[1476.8525]]></Value>
+					<Value><![CDATA[1841.4985]]></Value>
+					<Value><![CDATA[2537.798]]></Value>
+					<Value><![CDATA[3349.9055]]></Value>
+					<Value><![CDATA[3807.8815]]></Value>
+					<Value><![CDATA[4473.0585]]></Value>
+					<Value><![CDATA[5162.269]]></Value>
+					<Value><![CDATA[5406.8595]]></Value>
+					<Value><![CDATA[5362.9695]]></Value>
+					<Value><![CDATA[4864.1195]]></Value>
+					<Value><![CDATA[3947.4015]]></Value>
+					<Value><![CDATA[3318.0285]]></Value>
+					<Value><![CDATA[2816.1895]]></Value>
+					<Value><![CDATA[2656.278]]></Value>
+					<Value><![CDATA[2607.782]]></Value>
+					<Value><![CDATA[2912.282]]></Value>
+					<Value><![CDATA[3351.747]]></Value>
+					<Value><![CDATA[3559.714]]></Value>
+					<Value><![CDATA[4175.4605]]></Value>
+					<Value><![CDATA[4984.875]]></Value>
+					<Value><![CDATA[5654.014]]></Value>
+					<Value><![CDATA[6127.608]]></Value>
+				</TableFunction>
+			</TableFunctions>
 			<AgentLinks>
 				<AgentLink>
 					<Id>1769865394877</Id>
@@ -2298,6 +2606,150 @@
 					<FillAreaUnderLine>false</FillAreaUnderLine>
 					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
     			</TimePlot>
+    			<BarChart>
+					<Id>1774360064050</Id>
+					<Name><![CDATA[Cost_Revenue]]></Name>
+					<X>-360</X><Y>-320</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<AutoUpdate>true</AutoUpdate>
+					<RecurrenceProperties>
+						<Id>1774360064048</Id>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1774425600000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[0]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</RecurrenceCode>
+					</RecurrenceProperties>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>260</Width>
+					<Height>210</Height>
+					<BackgroundColor/>
+					<BorderColor/>
+					<ChartArea>
+						<XOffset>50</XOffset>
+						<YOffset>30</YOffset>
+						<Width>180</Width>
+						<Height>120</Height>
+						<BackgroundColor>-1</BackgroundColor>
+						<BorderColor>-16777216</BorderColor>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>30</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<ShowLegend>true</ShowLegend>
+					<DataItem>
+					<Id>1774360066963</Id>
+					<Expression><![CDATA[Revenue_H2]]></Expression>
+					<Color>-9728477</Color>
+						<Title><![CDATA[Hydrogen Sales]]></Title>
+					</DataItem>
+					<DataItem>
+					<Id>1774360113150</Id>
+					<Expression><![CDATA[Saving_O2]]></Expression>
+					<Color>-16728065</Color>
+						<Title><![CDATA[Oxygen Cost Avoidance]]></Title>
+					</DataItem>
+					<DataItem>
+					<Id>1774360136713</Id>
+					<Expression><![CDATA[Saving_Heat]]></Expression>
+					<Color>-4565549</Color>
+						<Title><![CDATA[Heat Recovery Value]]></Title>
+					</DataItem>
+					<ScaleFromExpression><![CDATA[0]]></ScaleFromExpression>
+					<ScaleToExpression><![CDATA[1]]></ScaleToExpression>
+					<ScaleType>AUTO</ScaleType>
+					<Bars>
+						<Direction>UP</Direction>
+						<RelativeWidth>0.8</RelativeWidth>
+					</Bars>
+    			</BarChart>
+    			<TimePlot>
+					<Id>1774431397891</Id>
+					<Name><![CDATA[plot]]></Name>
+					<X>1130</X><Y>-290</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<AutoUpdate>true</AutoUpdate>
+					<RecurrenceProperties>
+						<Id>1774431397889</Id>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1774512000000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[0]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</RecurrenceCode>
+					</RecurrenceProperties>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>260</Width>
+					<Height>210</Height>
+					<BackgroundColor/>
+					<BorderColor/>
+					<ChartArea>
+						<XOffset>50</XOffset>
+						<YOffset>30</YOffset>
+						<Width>180</Width>
+						<Height>120</Height>
+						<BackgroundColor>-1</BackgroundColor>
+						<BorderColor>-16777216</BorderColor>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>30</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<ShowLegend>true</ShowLegend>
+					<TimeWindowsMovementType>MOVEMENT_WITH_TIME</TimeWindowsMovementType>		
+					<TimeWindowUnits>MODEL_TIME_UNIT</TimeWindowUnits>
+					<VerScaleFromExpression><![CDATA[0]]></VerScaleFromExpression>
+					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
+					<VerScaleType>AUTO</VerScaleType>
+					<DrawLine>true</DrawLine>
+					<Interpolation>LINEAR</Interpolation>
+					<DatasetExpression>  
+						<Title><![CDATA[Title]]></Title>
+					<Id>1774431400070</Id>
+					<Expression><![CDATA[my_dataset]]></Expression>
+					<Color>-32944</Color>
+					<Expression2><![CDATA[0]]></Expression2>
+					<Expression2Flag>true</Expression2Flag>
+						<PointStyle>NONE</PointStyle>
+						<LineWidth>1.0</LineWidth>
+					</DatasetExpression>
+					<SamplesToKeep>100</SamplesToKeep>
+					<TimeWindowExpression><![CDATA[100]]></TimeWindowExpression>
+					<FillAreaUnderLine>false</FillAreaUnderLine>
+					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
+    			</TimePlot>
 			</Presentation>
 
 				</Level>
@@ -2334,15 +2786,15 @@
 		<Name><![CDATA[RunConfiguration]]></Name>
 		<MaximumMemory>512</MaximumMemory>
 		<ModelTimeProperties>
-			<StopOption><![CDATA[Stop at specified time]]></StopOption>
-			<InitialDate><![CDATA[1769817600000]]></InitialDate>	
+			<StopOption><![CDATA[Stop at specified date]]></StopOption>
+			<InitialDate><![CDATA[1767225600000]]></InitialDate>	
 			<InitialTime><![CDATA[0.0]]></InitialTime>	
-			<FinalDate><![CDATA[1769821200000]]></FinalDate>	
-			<FinalTime><![CDATA[3600.0]]></FinalTime>	
+			<FinalDate><![CDATA[1769817600000]]></FinalDate>	
+			<FinalTime><![CDATA[2592000.0]]></FinalTime>	
 		</ModelTimeProperties>
 		<AnimationProperties>
-			<StopNever>true</StopNever>
-			<ExecutionMode>realTimeScaled</ExecutionMode>
+			<StopNever>false</StopNever>
+			<ExecutionMode>virtualTime</ExecutionMode>
 			<RealTimeScale>1.0</RealTimeScale>
 			<EnableZoomAndPanning>true</EnableZoomAndPanning>
 			<EnableDeveloperPanel>false</EnableDeveloperPanel>
@@ -2392,9 +2844,6 @@
 			</Presentation>
 
 			<Parameters>
-				<Parameter>
-					<ParameterName><![CDATA[P_Electrolyzer]]></ParameterName>
-				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[Eff_Electrolyzer]]></ParameterName>
 				</Parameter>
@@ -2469,6 +2918,15 @@
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[Kp_O2]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[Price_H2]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[Price_O2]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[Price_Heat]]></ParameterName>
 				</Parameter>
 			</Parameters>
 			<PresentationProperties>
