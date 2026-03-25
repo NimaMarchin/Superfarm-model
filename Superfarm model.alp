@@ -17,7 +17,7 @@
 		<!--   =========   Active Object Class   ========  -->
 		<ActiveObjectClass>
 			<Id>1769865394865</Id>
-			<Name><![CDATA[Oxygen_Balance_Plot]]></Name>
+			<Name><![CDATA[Main]]></Name>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1769865394881</Id>
@@ -838,7 +838,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[200000]]></Code>
+							<Code><![CDATA[526170]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1773171920947</Id>
@@ -1288,7 +1288,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.608]]></Code>
+							<Code><![CDATA[1.599]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1774436215757</Id>
