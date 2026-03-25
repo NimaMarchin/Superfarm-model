@@ -356,7 +356,7 @@
 					<Width>20</Width>
 					<Height>20</Height>
 						<Expression><![CDATA[(O2_tank_in-O2_consum_fish)/V_tank]]></Expression>
-						<InitialValue><![CDATA[0.300]]></InitialValue>
+						<InitialValue><![CDATA[0.303]]></InitialValue>
 						<Color>-16776961</Color>
 					</Properties>
 				</Variable>
@@ -802,7 +802,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[200000]]></Code>
+							<Code><![CDATA[526170]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1773171920947</Id>
@@ -1252,7 +1252,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.303]]></Code>
+							<Code><![CDATA[1.599]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1774436215757</Id>
