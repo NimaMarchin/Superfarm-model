@@ -2610,7 +2610,7 @@
 					<Id>1774806149778</Id>
 					<Expression><![CDATA[Total_Profit]]></Expression>
 					<Color>-16711936</Color>
-						<Title><![CDATA[Total Profit (€)]]></Title>
+						<Title><![CDATA[Net Profit (€)]]></Title>
 					</DataItem>
 					<DataItem>
 					<Id>1774360066963</Id>
