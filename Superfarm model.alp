@@ -4,7 +4,7 @@
 	         AnyLogic Project File
 *************************************************
 -->
-<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.9.7.202512121156" AlpVersion="8.9.7">
+<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.9.8.202602271015" AlpVersion="8.9.7">
 <Model>
 	<Id>1769865394861</Id>
 	<Name><![CDATA[Superfarm model]]></Name>
@@ -352,7 +352,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[Wind_Profile(time())*1.16739]]></Formula>
+						<Formula><![CDATA[Wind_Profile(time())]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color>-8388480</Color>
 					</Properties>
@@ -390,7 +390,7 @@
 				</Variable>
 				<Variable Class="AuxVariable">
 					<Id>1774811708984</Id>
-					<Name><![CDATA[Total_Profit]]></Name>
+					<Name><![CDATA[Total_Revenue]]></Name>
 					<Unit>euro</Unit> 
 					<X>20</X><Y>650</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
@@ -401,6 +401,22 @@
 						<Formula><![CDATA[(Revenue_H2+Total_Saving_O2+Total_Saving_Heat)-V_Cost_Electricity]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color>-16711936</Color>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1774938809722</Id>
+					<Name><![CDATA[T_outdoor]]></Name>
+					<Unit>K</Unit> 
+					<X>1840</X><Y>840</Y>
+					<Label><X>10</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[T_outdoor_profile(time())]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color>-4073239</Color>
 					</Properties>
 
 				</Variable>
@@ -1092,31 +1108,6 @@
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1774122701195</Id>
-					<Name><![CDATA[T_outdoor]]></Name>
-					<Unit>K</Unit> 
-					<X>1840</X><Y>840</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[double]]></Type>
-						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
-						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[275.15]]></Code>
-						</DefaultValue>
-						<ParameterEditor>
-							<Id>1774122701193</Id>
-							<EditorContolType>TEXT_BOX</EditorContolType>
-							<MinSliderValue><![CDATA[0]]></MinSliderValue>
-							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
-							<DelimeterType>NO_DELIMETER</DelimeterType>
-						</ParameterEditor>
-					</Properties>                 
-				</Variable>
-				<Variable Class="Parameter">
 					<Id>1774292803329</Id>
 					<Name><![CDATA[l_greenhouse]]></Name>
 					<Unit>m</Unit> 
@@ -1738,7 +1729,7 @@
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1774122701195" TargetId="1774122936723" Polarity="null">
+				<Link SourceId="1774938809722" TargetId="1774122936723" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>0</X><Y>70</Y></Direction>
@@ -1993,7 +1984,7 @@
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1774122701195" TargetId="1774293511950" Polarity="null">
+				<Link SourceId="1774938809722" TargetId="1774293511950" Polarity="null">
 					<Height>117.947</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>100</X><Y>380</Y></Direction>
@@ -2358,7 +2349,7 @@
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-160</X><Y>75</Y></Direction>
 					<Id>1774779979567</Id>
-					<Name><![CDATA[Revenue_H2 - Total_Profit]]></Name>
+					<Name><![CDATA[Revenue_H2 - Total_Revenue]]></Name>
 					<X>180</X><Y>575</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -2373,7 +2364,7 @@
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-160</X><Y>-35</Y></Direction>
 					<Id>1774779987537</Id>
-					<Name><![CDATA[Total_Saving_O2 - Total_Profit]]></Name>
+					<Name><![CDATA[Total_Saving_O2 - Total_Revenue]]></Name>
 					<X>180</X><Y>685</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -2388,7 +2379,7 @@
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-160</X><Y>-140</Y></Direction>
 					<Id>1774779993436</Id>
-					<Name><![CDATA[Total_Saving_Heat - Total_Profit]]></Name>
+					<Name><![CDATA[Total_Saving_Heat - Total_Revenue]]></Name>
 					<X>180</X><Y>790</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -2433,7 +2424,7 @@
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-70</X><Y>250</Y></Direction>
 					<Id>1774811742567</Id>
-					<Name><![CDATA[V_Cost_Electricity - Total_Profit]]></Name>
+					<Name><![CDATA[V_Cost_Electricity - Total_Revenue]]></Name>
 					<X>90</X><Y>400</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -2494,31 +2485,106 @@
 					<Argument><![CDATA[79200.0]]></Argument>
 					<Argument><![CDATA[82800.0]]></Argument>
 					<Argument><![CDATA[86400.0]]></Argument>
-					<Value><![CDATA[1384020.0]]></Value>
-					<Value><![CDATA[1219382.0]]></Value>
-					<Value><![CDATA[1293720.0]]></Value>
-					<Value><![CDATA[1476853.0]]></Value>
-					<Value><![CDATA[1841499.0]]></Value>
-					<Value><![CDATA[2537798.0]]></Value>
-					<Value><![CDATA[3349906.0]]></Value>
-					<Value><![CDATA[3807882.0]]></Value>
-					<Value><![CDATA[4473059.0]]></Value>
-					<Value><![CDATA[5162269.0]]></Value>
-					<Value><![CDATA[5406860.0]]></Value>
-					<Value><![CDATA[5362970.0]]></Value>
-					<Value><![CDATA[4864120.0]]></Value>
-					<Value><![CDATA[3947402.0]]></Value>
-					<Value><![CDATA[3318029.0]]></Value>
-					<Value><![CDATA[2816190.0]]></Value>
-					<Value><![CDATA[2656278.0]]></Value>
-					<Value><![CDATA[2607782.0]]></Value>
-					<Value><![CDATA[2912282.0]]></Value>
-					<Value><![CDATA[3351747.0]]></Value>
-					<Value><![CDATA[3559714.0]]></Value>
-					<Value><![CDATA[4175461.0]]></Value>
-					<Value><![CDATA[4984875.0]]></Value>
-					<Value><![CDATA[5654014.0]]></Value>
-					<Value><![CDATA[6127608.0]]></Value>
+					<Value><![CDATA[439443.4672]]></Value>
+					<Value><![CDATA[466233.7442]]></Value>
+					<Value><![CDATA[532231.4494]]></Value>
+					<Value><![CDATA[663643.4009]]></Value>
+					<Value><![CDATA[914577.3921]]></Value>
+					<Value><![CDATA[1207246.533]]></Value>
+					<Value><![CDATA[1372292.961]]></Value>
+					<Value><![CDATA[1612010.955]]></Value>
+					<Value><![CDATA[1860390.196]]></Value>
+					<Value><![CDATA[1948536.275]]></Value>
+					<Value><![CDATA[1932719.097]]></Value>
+					<Value><![CDATA[1752942.404]]></Value>
+					<Value><![CDATA[1422573.495]]></Value>
+					<Value><![CDATA[1195758.627]]></Value>
+					<Value><![CDATA[1014904.751]]></Value>
+					<Value><![CDATA[957275.4828]]></Value>
+					<Value><![CDATA[939798.3845]]></Value>
+					<Value><![CDATA[1049534.784]]></Value>
+					<Value><![CDATA[1207910.176]]></Value>
+					<Value><![CDATA[1282857.795]]></Value>
+					<Value><![CDATA[1504761.914]]></Value>
+					<Value><![CDATA[1796460.545]]></Value>
+					<Value><![CDATA[2037606.373]]></Value>
+					<Value><![CDATA[2208281.252]]></Value>
+					<Value><![CDATA[532231.4494]]></Value>
+				</TableFunction>
+				<TableFunction AccessType="public" StaticFunction="false">
+					<Id>1774937213717</Id>
+					<Name><![CDATA[T_outdoor_profile]]></Name>
+					<Unit>K</Unit> 
+					<X>1960</X><Y>840</Y>
+					<Label><X>20</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<InterpolationMethod>LINEAR</InterpolationMethod>
+					<OutOfRangeBehaviour>REPEATING</OutOfRangeBehaviour>
+					<OutOfRangeCustomValue><![CDATA[0.0]]></OutOfRangeCustomValue>
+					<ApproximationOrder><![CDATA[1]]></ApproximationOrder>
+					<LoadFromDatabase><![CDATA[false]]></LoadFromDatabase>
+					<ValuesQuery>
+						<Id>1774937213715</Id>
+						<TableReference>
+						</TableReference>
+							<ArgumentColumnReference>
+							</ArgumentColumnReference>
+							<ValueColumnReference>
+							</ValueColumnReference>
+					</ValuesQuery>
+// arguments and values
+					<Argument><![CDATA[0.0]]></Argument>
+					<Argument><![CDATA[3600.0]]></Argument>
+					<Argument><![CDATA[7200.0]]></Argument>
+					<Argument><![CDATA[10800.0]]></Argument>
+					<Argument><![CDATA[14400.0]]></Argument>
+					<Argument><![CDATA[18000.0]]></Argument>
+					<Argument><![CDATA[21600.0]]></Argument>
+					<Argument><![CDATA[25200.0]]></Argument>
+					<Argument><![CDATA[28800.0]]></Argument>
+					<Argument><![CDATA[32400.0]]></Argument>
+					<Argument><![CDATA[36000.0]]></Argument>
+					<Argument><![CDATA[39600.0]]></Argument>
+					<Argument><![CDATA[43200.0]]></Argument>
+					<Argument><![CDATA[46800.0]]></Argument>
+					<Argument><![CDATA[50400.0]]></Argument>
+					<Argument><![CDATA[54000.0]]></Argument>
+					<Argument><![CDATA[57600.0]]></Argument>
+					<Argument><![CDATA[61200.0]]></Argument>
+					<Argument><![CDATA[64800.0]]></Argument>
+					<Argument><![CDATA[68400.0]]></Argument>
+					<Argument><![CDATA[72000.0]]></Argument>
+					<Argument><![CDATA[75600.0]]></Argument>
+					<Argument><![CDATA[79200.0]]></Argument>
+					<Argument><![CDATA[82800.0]]></Argument>
+					<Argument><![CDATA[86400.0]]></Argument>
+					<Value><![CDATA[282.65]]></Value>
+					<Value><![CDATA[282.4]]></Value>
+					<Value><![CDATA[282.15]]></Value>
+					<Value><![CDATA[282.45]]></Value>
+					<Value><![CDATA[283.15]]></Value>
+					<Value><![CDATA[283.4]]></Value>
+					<Value><![CDATA[283.45]]></Value>
+					<Value><![CDATA[283.65]]></Value>
+					<Value><![CDATA[284.05]]></Value>
+					<Value><![CDATA[284.65]]></Value>
+					<Value><![CDATA[284.95]]></Value>
+					<Value><![CDATA[285.15]]></Value>
+					<Value><![CDATA[285.15]]></Value>
+					<Value><![CDATA[285.05]]></Value>
+					<Value><![CDATA[284.65]]></Value>
+					<Value><![CDATA[284.55]]></Value>
+					<Value><![CDATA[284.35]]></Value>
+					<Value><![CDATA[284.15]]></Value>
+					<Value><![CDATA[283.95]]></Value>
+					<Value><![CDATA[283.75]]></Value>
+					<Value><![CDATA[283.45]]></Value>
+					<Value><![CDATA[283.25]]></Value>
+					<Value><![CDATA[283.15]]></Value>
+					<Value><![CDATA[282.65]]></Value>
+					<Value><![CDATA[282.55]]></Value>
 				</TableFunction>
 			</TableFunctions>
 			<AgentLinks>
@@ -2608,7 +2674,7 @@
 					<ShowLegend>true</ShowLegend>
 					<DataItem>
 					<Id>1774806149778</Id>
-					<Expression><![CDATA[Total_Profit]]></Expression>
+					<Expression><![CDATA[Total_Revenue]]></Expression>
 					<Color>-16711936</Color>
 						<Title><![CDATA[Net Profit (€)]]></Title>
 					</DataItem>
@@ -3108,9 +3174,6 @@
 					<ParameterName><![CDATA[A_tank]]></ParameterName>
 				</Parameter>
 				<Parameter>
-					<ParameterName><![CDATA[T_outdoor]]></ParameterName>
-				</Parameter>
-				<Parameter>
 					<ParameterName><![CDATA[l_greenhouse]]></ParameterName>
 				</Parameter>
 				<Parameter>
@@ -3183,6 +3246,7 @@
 	<Uuid>404652e6-561a-404c-aab2-ab7415f40ef5</Uuid>
 	<Uuid>6fd6cd57-6dfe-4fc6-be0b-c74065351957</Uuid>
 	<Uuid>3325dc48-3ad4-41e3-836f-dfd0e98fe1ed</Uuid>
+	<Uuid>bb27038a-0f3a-48bb-b235-4a44066a14aa</Uuid>
 	<Uuid>3f69ef3d-706e-41a6-8af0-11658c5eef68</Uuid>
 	<Uuid>3f6fe405-e047-4304-91d6-6eee206d1106</Uuid>
 	<Uuid>820d2b51-5b4a-48e7-b0b6-e46418e3c0f2</Uuid>
@@ -3238,5 +3302,7 @@
 	<Uuid>1737c8c6-b526-4dd8-589e-ee4e205b06f4</Uuid>
 	<Uuid>6a43bef6-8b70-4253-a828-82c3ab399655</Uuid>
 	<Uuid>0a27038a-0f3a-48bb-b235-4a44066a1402</Uuid>
+	<Uuid>0a9ec2c3-5e18-4c0a-a183-fd86d9d9a08b</Uuid>
+	<Uuid>2216cdd0-177c-5678-9e88-dd8b95313334</Uuid>
 </ConvertersApplied>
 </AnyLogicWorkspace>
