@@ -4,7 +4,7 @@
 	         AnyLogic Project File
 *************************************************
 -->
-<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.9.7.202512121156" AlpVersion="8.9.7">
+<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.9.8.202602271015" AlpVersion="8.9.7">
 <Model>
 	<Id>1769865394861</Id>
 	<Name><![CDATA[Superfarm model]]></Name>
@@ -360,7 +360,7 @@
 				</Variable>
 				<Variable Class="AuxVariable">
 					<Id>1774779627534</Id>
-					<Name><![CDATA[V_Cost_Electricity]]></Name>
+					<Name><![CDATA[Cost_Electricity]]></Name>
 					<X>90</X><Y>400</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -398,7 +398,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[(Revenue_H2+Total_Saving_O2+Total_Saving_Heat)-V_Cost_Electricity]]></Formula>
+						<Formula><![CDATA[(Revenue_H2+Revenue_O2+Revenue_Heat)]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color>-16711936</Color>
 					</Properties>
@@ -451,7 +451,7 @@
 					<EquationStyle>classic</EquationStyle>
 					<Width>20</Width>
 					<Height>20</Height>
-						<InitialValue><![CDATA[0]]></InitialValue>
+						<InitialValue><![CDATA[15000]]></InitialValue>
 						<Color>-14774017</Color>
 					</Properties>
 				</Variable>
@@ -563,7 +563,7 @@
 				</Variable>
 				<Variable Class="StockVariable">
 					<Id>1774778341326</Id>
-					<Name><![CDATA[Total_Saving_O2]]></Name>
+					<Name><![CDATA[Revenue_O2]]></Name>
 					<Unit>euro</Unit> 
 					<X>180</X><Y>685</Y>
 					<Label><X>-102</X><Y>-24</Y></Label>
@@ -581,7 +581,7 @@
 				</Variable>
 				<Variable Class="StockVariable">
 					<Id>1774778344821</Id>
-					<Name><![CDATA[Total_Saving_Heat]]></Name>
+					<Name><![CDATA[Revenue_Heat]]></Name>
 					<Unit>euro</Unit> 
 					<X>180</X><Y>790</Y>
 					<Label><X>-112</X><Y>-24</Y></Label>
@@ -2244,7 +2244,7 @@
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-40</X><Y>-50</Y></Direction>
 					<Id>1774359626483</Id>
-					<Name><![CDATA[Price_O2 - Total_Saving_O2]]></Name>
+					<Name><![CDATA[Price_O2 - Revenue_O2]]></Name>
 					<X>220</X><Y>735</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -2259,7 +2259,7 @@
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-920</X><Y>245</Y></Direction>
 					<Id>1774359633503</Id>
-					<Name><![CDATA[O2_tank_in - Total_Saving_O2]]></Name>
+					<Name><![CDATA[O2_tank_in - Revenue_O2]]></Name>
 					<X>1100</X><Y>440</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -2274,7 +2274,7 @@
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-40</X><Y>-65</Y></Direction>
 					<Id>1774360036468</Id>
-					<Name><![CDATA[Price_Heat - Total_Saving_Heat]]></Name>
+					<Name><![CDATA[Price_Heat - Revenue_Heat]]></Name>
 					<X>220</X><Y>855</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -2289,7 +2289,7 @@
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-760</X><Y>-130</Y></Direction>
 					<Id>1774360042073</Id>
-					<Name><![CDATA[Q_tank_in - Total_Saving_Heat]]></Name>
+					<Name><![CDATA[Q_tank_in - Revenue_Heat]]></Name>
 					<X>940</X><Y>920</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -2319,7 +2319,7 @@
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-920</X><Y>-390</Y></Direction>
 					<Id>1774778974309</Id>
-					<Name><![CDATA[Q_greenhouse_in - Total_Saving_Heat]]></Name>
+					<Name><![CDATA[Q_greenhouse_in - Revenue_Heat]]></Name>
 					<X>1100</X><Y>1180</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -2334,7 +2334,7 @@
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-80</X><Y>-80</Y></Direction>
 					<Id>1774779703677</Id>
-					<Name><![CDATA[Total_Energy_In_J - V_Cost_Electricity]]></Name>
+					<Name><![CDATA[Total_Energy_In_J - Cost_Electricity]]></Name>
 					<X>170</X><Y>480</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -2364,7 +2364,7 @@
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-160</X><Y>-35</Y></Direction>
 					<Id>1774779987537</Id>
-					<Name><![CDATA[Total_Saving_O2 - Total_Revenue]]></Name>
+					<Name><![CDATA[Revenue_O2 - Total_Revenue]]></Name>
 					<X>180</X><Y>685</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -2379,7 +2379,7 @@
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-160</X><Y>-140</Y></Direction>
 					<Id>1774779993436</Id>
-					<Name><![CDATA[Total_Saving_Heat - Total_Revenue]]></Name>
+					<Name><![CDATA[Revenue_Heat - Total_Revenue]]></Name>
 					<X>180</X><Y>790</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -2411,21 +2411,6 @@
 					<Id>1774804840940</Id>
 					<Name><![CDATA[H2_prod - Revenue_H2]]></Name>
 					<X>840</X><Y>180</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color>-11832691</Color>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1774779627534" TargetId="1774811708984" Polarity="null">
-					<Height>-46.836</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-70</X><Y>250</Y></Direction>
-					<Id>1774811742567</Id>
-					<Name><![CDATA[V_Cost_Electricity - Total_Revenue]]></Name>
-					<X>90</X><Y>400</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2509,7 +2494,7 @@
 					<Value><![CDATA[1796460.545]]></Value>
 					<Value><![CDATA[2037606.373]]></Value>
 					<Value><![CDATA[2208281.252]]></Value>
-					<Value><![CDATA[532231.4494]]></Value>
+					<Value><![CDATA[2208281.252]]></Value>
 				</TableFunction>
 				<TableFunction AccessType="public" StaticFunction="false">
 					<Id>1774937213717</Id>
@@ -2626,7 +2611,7 @@
 			<Presentation>
     			<BarChart>
 					<Id>1774360064050</Id>
-					<Name><![CDATA[Daily_economic_Result]]></Name>
+					<Name><![CDATA[Revenue_and_Cost_of_Electricity]]></Name>
 					<X>10</X><Y>1380</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
@@ -2686,19 +2671,19 @@
 					</DataItem>
 					<DataItem>
 					<Id>1774360113150</Id>
-					<Expression><![CDATA[Total_Saving_O2]]></Expression>
+					<Expression><![CDATA[Revenue_O2]]></Expression>
 					<Color>-14774017</Color>
-						<Title><![CDATA[Saving Oxygen (€)]]></Title>
+						<Title><![CDATA[Oxygen Sales (€)]]></Title>
 					</DataItem>
 					<DataItem>
 					<Id>1774360136713</Id>
-					<Expression><![CDATA[Total_Saving_Heat]]></Expression>
+					<Expression><![CDATA[Revenue_Heat]]></Expression>
 					<Color>-65536</Color>
-						<Title><![CDATA[Heat Recovery Value (€)]]></Title>
+						<Title><![CDATA[Heat Sales (€)]]></Title>
 					</DataItem>
 					<DataItem>
 					<Id>1774786889447</Id>
-					<Expression><![CDATA[V_Cost_Electricity]]></Expression>
+					<Expression><![CDATA[Cost_Electricity]]></Expression>
 					<Color>-8388480</Color>
 						<Title><![CDATA[Electricity Cost (€)]]></Title>
 					</DataItem>
@@ -2723,7 +2708,7 @@
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
 					<Color>-16777216</Color>
-					<Text><![CDATA[Daily Economic Result (€)]]></Text>
+					<Text><![CDATA[Revenue and Cost of Electricity (€)]]></Text>
 					<Font>
 						<Name>Times New Roman</Name>
 						<Size>14</Size>
@@ -2788,18 +2773,18 @@
 					<Id>1774780328578</Id>
 					<Expression><![CDATA[Q_store]]></Expression>
 					<Color>-65536</Color>
-						<Title><![CDATA[Recovered Heat (J)]]></Title>
+						<Title><![CDATA[Stored Heat Energy (J)]]></Title>
 					</DataItem>
 					<DataItem>
 					<Id>1774781507011</Id>
 					<Expression><![CDATA[Total_Energy_In_J-((H2_store_kg*141800000)+Q_store)]]></Expression>
 					<Color>-256</Color>
-						<Title><![CDATA[Sold Energy (J)]]></Title>
+						<Title><![CDATA[Sold Heat Energy (J)]]></Title>
 					</DataItem>
     			</PieChart>
     			<TimePlot>
 					<Id>1774781998925</Id>
-					<Name><![CDATA[Technical_Sustainability]]></Name>
+					<Name><![CDATA[Technical_Parameters]]></Name>
 					<X>680</X><Y>1380</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
@@ -2873,7 +2858,7 @@
 						<LineWidth>1.0</LineWidth>
 					</DatasetExpression>
 					<DatasetExpression>  
-						<Title><![CDATA[Heat in Fish Tank (J/s)]]></Title>
+						<Title><![CDATA[Heat to Fish Tank (J/s)]]></Title>
 					<Id>1774783145827</Id>
 					<Expression><![CDATA[my_dataset2]]></Expression>
 					<Color>-8388608</Color>
@@ -2883,7 +2868,7 @@
 						<LineWidth>1.0</LineWidth>
 					</DatasetExpression>
 					<DatasetExpression>  
-						<Title><![CDATA[Heat in Greenhouse (J/s)]]></Title>
+						<Title><![CDATA[Heat to Greenhouse (J/s)]]></Title>
 					<Id>1774783251267</Id>
 					<Expression><![CDATA[my_dataset3]]></Expression>
 					<Color>-10496</Color>
@@ -2931,7 +2916,7 @@
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
 					<Color>-16777216</Color>
-					<Text><![CDATA[Technical Sustainability]]></Text>
+					<Text><![CDATA[Technical Parameters]]></Text>
 					<Font>
 						<Name>Times New Roman</Name>
 						<Size>14</Size>
@@ -3246,6 +3231,7 @@
 	<Uuid>404652e6-561a-404c-aab2-ab7415f40ef5</Uuid>
 	<Uuid>6fd6cd57-6dfe-4fc6-be0b-c74065351957</Uuid>
 	<Uuid>3325dc48-3ad4-41e3-836f-dfd0e98fe1ed</Uuid>
+	<Uuid>bb27038a-0f3a-48bb-b235-4a44066a14aa</Uuid>
 	<Uuid>3f69ef3d-706e-41a6-8af0-11658c5eef68</Uuid>
 	<Uuid>3f6fe405-e047-4304-91d6-6eee206d1106</Uuid>
 	<Uuid>820d2b51-5b4a-48e7-b0b6-e46418e3c0f2</Uuid>
@@ -3301,5 +3287,7 @@
 	<Uuid>1737c8c6-b526-4dd8-589e-ee4e205b06f4</Uuid>
 	<Uuid>6a43bef6-8b70-4253-a828-82c3ab399655</Uuid>
 	<Uuid>0a27038a-0f3a-48bb-b235-4a44066a1402</Uuid>
+	<Uuid>0a9ec2c3-5e18-4c0a-a183-fd86d9d9a08b</Uuid>
+	<Uuid>2216cdd0-177c-5678-9e88-dd8b95313334</Uuid>
 </ConvertersApplied>
 </AnyLogicWorkspace>
