@@ -367,7 +367,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[0.08*(Total_Energy_In_J/3600000)]]></Formula>
+						<Formula><![CDATA[0.061*(Total_Energy_In_J/3600000)]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color>-8388480</Color>
 					</Properties>
@@ -1396,7 +1396,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.01]]></Code>
+							<Code><![CDATA[0.0081]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1774357848708</Id>
@@ -1421,7 +1421,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.0048]]></Code>
+							<Code><![CDATA[0.0023]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1774357983452</Id>
@@ -1446,7 +1446,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.000000022]]></Code>
+							<Code><![CDATA[0.000000014]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1774358208416</Id>
